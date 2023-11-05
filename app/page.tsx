@@ -7,7 +7,10 @@ import MascotStore, { MascotData } from './common/mascot-store'
 
 type MatchQueue = [MascotData, MascotData?][];
 
-
+/**
+ * Create a queue of matches for each college in the store.
+ * @returns A list of tuples of colleges, paired based on placement in the store.
+ */
 function generateMatchQueue(): MatchQueue {
   let queue: MatchQueue = [];
 
@@ -25,13 +28,13 @@ export default function Home() {
   const [rightMascot, updateRightMascot] = useState<MascotData | undefined>(matchQueue[0][1]);
   
   /**
-   * 
-   * @param winner the 
+   * Advance the match queue forward.
+   * @param winner The mascot that will advance to the next round.
    */
-  function handleQueueUpdate(winner: MascotData) {
+  function handleQueueUpdate(winner: MascotData): void {
     const lastElement = matchQueue.length - 1;
 
-    // 
+    // Either create a new match, or pair an existing match with an opponent.
     if (matchQueue[lastElement][1] === undefined) {
       matchQueue[lastElement][1] = winner;
     } else {
@@ -39,6 +42,8 @@ export default function Home() {
     }
 
     matchQueue.shift();
+
+    // TODO: If only 1 unfufilled match remains in the queue, intiate winstate.
 
     updateMatchQueue(matchQueue);
     updateLeftMascot(matchQueue[0][0]);
