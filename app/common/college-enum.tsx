@@ -1,5 +1,4 @@
 enum CollegeEnum {
-    Unknown = -1,
     FakeUniversity,
     NotRealCollege,
     CollegeA,
