@@ -1,10 +1,14 @@
 import Image from 'next/image'
 import styles from './mascot-card.module.css'
 import { MascotData } from '@/app/common/mascot-store'
+import CollegeEnum from '@/app/common/college-enum'
 
-export default function MascotCard({mascotData}: { mascotData: MascotData }) {
+export default function MascotCard({mascotData, handleQueueUpdate}: { mascotData: MascotData, handleQueueUpdate: (winner: CollegeEnum) => void }) {
+
+  function onClick(): void { handleQueueUpdate(mascotData.id); }
+
   return (
-    <button className={styles.main}>
+    <button className={styles.main} onClick={onClick}>
       {mascotData.collegeName}
       <Image
         src={mascotData.imgSrc}
