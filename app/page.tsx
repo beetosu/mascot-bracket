@@ -9,10 +9,12 @@ export type MatchQueue = [MascotData, MascotData?][];
 
 /**
  * Create a queue of matches for each college in the store.
- * (this presupposes that the MatchStore has an odd number of elements, which it should if it's valid info)
  * @returns A list of tuples of colleges, paired based on placement in the store.
  */
 function generateMatchQueue(): MatchQueue {
+  // PRECONDITIONS:
+  // The MatchStore has an odd number of elements, which it should if it's valid info)
+
   let queue: MatchQueue = [];
 
   for (let i = 0; i < MascotStore.length; i += 2) {

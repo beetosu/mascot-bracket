@@ -7,8 +7,7 @@ import MascotCard from '@/app/components/mascot-card/mascot-card';
 import { MatchQueue } from '@/app/page';
 
 export default function TournamentState({ matchQueue, updateMatchQueue }: { matchQueue: MatchQueue, updateMatchQueue: Dispatch<SetStateAction<MatchQueue>> } ) {
-  const [leftMascot, updateLeftMascot] = useState<MascotData>(matchQueue[0][0]);
-  const [rightMascot, updateRightMascot] = useState<MascotData | undefined>(matchQueue[0][1]);
+  let [matchHistory, updateMatchHistory] = useState<string>('');
   
   /**
    * Advance the match queue forward.
@@ -24,17 +23,35 @@ export default function TournamentState({ matchQueue, updateMatchQueue }: { matc
       matchQueue.push([winner, undefined]);
     }
 
-    matchQueue.shift();
+    const lastMatch = matchQueue.shift();
+    const winnerIdx = lastMatch?.findIndex(m => m?.id === winner.id);
+
+    matchHistory += winnerIdx;
+    updateMatchHistory(matchHistory);
 
     // TODO: If only 1 unfufilled match remains in the queue, intiate winstate.
 
     updateMatchQueue(matchQueue);
-    updateLeftMascot(matchQueue[0][0]);
-    updateRightMascot(matchQueue[0][1]);
   }
+
+  function binaryToHex(): string {
+    const decimal = parseInt(matchHistory, 2)
+
+    if (Number.isNaN(decimal)) {
+      return '';
+    }
+
+    return decimal.toString(16)
+  }
+
+  const currentMatch = matchQueue[0]
+  const leftMascot = currentMatch[0];
+  const rightMascot = currentMatch[1];
 
   return (
     <div className={styles.gameState}>
+      <p>{matchHistory}</p>
+      <p>{binaryToHex()}</p>
       <MascotCard 
         key={leftMascot.id}
         mascotData={leftMascot}
