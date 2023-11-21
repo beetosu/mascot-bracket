@@ -1,5 +1,3 @@
-"use client";
-
 import { MascotData } from '@/app/common/mascot-store';
 
 type WinStateProps = { 
