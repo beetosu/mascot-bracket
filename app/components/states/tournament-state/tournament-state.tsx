@@ -4,9 +4,16 @@ import { Dispatch, SetStateAction, useState } from 'react'
 import styles from './tournament-state.module.css'
 import { MascotData } from '@/app/common/mascot-store';
 import MascotCard from '@/app/components/mascot-card/mascot-card';
-import { MatchQueue } from '@/app/page';
+import { ExtraData, MatchQueue } from '@/app/page';
+import GameStateEnum from '@/app/common/game-state-enum';
 
-export default function TournamentState({ matchQueue, updateMatchQueue }: { matchQueue: MatchQueue, updateMatchQueue: Dispatch<SetStateAction<MatchQueue>> } ) {
+type TournamentStateProps = { 
+  matchQueue: MatchQueue,
+  updateMatchQueue: Dispatch<SetStateAction<MatchQueue>>,
+  handleGameStateTransition: (upcomingGameState: GameStateEnum, extraData?: ExtraData) => void
+}
+
+export default function TournamentState({ matchQueue, updateMatchQueue, handleGameStateTransition }: TournamentStateProps ) {
   let [matchHistory, updateMatchHistory] = useState<string>('');
   
   /**
@@ -24,24 +31,15 @@ export default function TournamentState({ matchQueue, updateMatchQueue }: { matc
     }
 
     const lastMatch = matchQueue.shift();
-    const winnerIdx = lastMatch?.findIndex(m => m?.id === winner.id);
+    const winnerIdx = lastMatch?.findIndex(m => m?.id === winner.id) ?? 0;
 
-    matchHistory += winnerIdx;
+    matchHistory += winnerIdx.toString();
     updateMatchHistory(matchHistory);
-
-    // TODO: If only 1 unfufilled match remains in the queue, intiate winstate.
-
     updateMatchQueue(matchQueue);
-  }
 
-  function binaryToHex(): string {
-    const decimal = parseInt(matchHistory, 2)
-
-    if (Number.isNaN(decimal)) {
-      return '';
+    if (matchQueue.length === 1 && matchQueue[0][1] === undefined) {
+      handleGameStateTransition(GameStateEnum.Win, { matchHistory });
     }
-
-    return decimal.toString(16)
   }
 
   const currentMatch = matchQueue[0]
@@ -50,8 +48,6 @@ export default function TournamentState({ matchQueue, updateMatchQueue }: { matc
 
   return (
     <div className={styles.gameState}>
-      <p>{matchHistory}</p>
-      <p>{binaryToHex()}</p>
       <MascotCard 
         key={leftMascot.id}
         mascotData={leftMascot}

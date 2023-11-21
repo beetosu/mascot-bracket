@@ -4,8 +4,12 @@ import { useState } from 'react'
 import styles from './page.module.css'
 import MascotStore, { MascotData } from './common/mascot-store'
 import TournamentState from './components/states/tournament-state/tournament-state';
+import GameStateEnum from './common/game-state-enum';
 
 export type MatchQueue = [MascotData, MascotData?][];
+export type ExtraData = {
+  matchHistory?: string
+}
 
 /**
  * Create a queue of matches for each college in the store.
@@ -26,14 +30,58 @@ function generateMatchQueue(): MatchQueue {
 }
 
 export default function Home() {
-  const [matchQueue, updateMatchQueue] = useState<MatchQueue>(generateMatchQueue());
+  const initialMatchQueue = generateMatchQueue();
+  const [matchQueue, updateMatchQueue] = useState<MatchQueue>(initialMatchQueue);
+  const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Tournament);
+  const [matchHistory, updateMatchHistory] = useState<string>('');
+
+  function handleGameStateTransition(upcomingGameState: GameStateEnum, extraData?: ExtraData) {  
+    switch(upcomingGameState) {
+      case GameStateEnum.Win:
+        if (!extraData?.matchHistory) {
+          updateGameState(GameStateEnum.Unknown);
+          return;
+        }
+
+        updateMatchHistory(extraData.matchHistory);
+        break;
+      default:
+        updateGameState(GameStateEnum.Unknown);
+        return;
+    }
+
+    updateGameState(upcomingGameState);
+  }
+
+  let game: JSX.Element = (<p>hi</p>);
+  switch(gameState) {
+    case GameStateEnum.Tournament:
+      game = (
+        <TournamentState 
+          matchQueue={matchQueue}
+          updateMatchQueue={updateMatchQueue}
+          handleGameStateTransition={handleGameStateTransition}
+        />
+      );
+      break;
+    case GameStateEnum.Win:
+      const winner = matchQueue[0][0];
+      game = (
+        <div>
+          <p>{winner.collegeName} wins x3</p>
+          <p>look at these winz: {matchHistory}</p>
+        </div>
+      );
+      break;
+    default:
+      game = (
+        <p>error 😭</p>
+      )
+  }
 
   return (
     <main className={styles.main}>
-      <TournamentState 
-        matchQueue={matchQueue}
-        updateMatchQueue={updateMatchQueue}
-      />
+      {game}
     </main>
   )
 }
