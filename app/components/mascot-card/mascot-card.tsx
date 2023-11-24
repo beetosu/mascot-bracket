@@ -9,15 +9,16 @@ export default function MascotCard({mascotData, handleQueueUpdate}: { mascotData
 
   return (
     <button className={styles.main} onClick={selectWinner}>
-      {mascotData?.collegeName}
       <Image
-        src={mascotData?.imgSrc ?? ''}
+        src={`/mascots/${mascotData?.imgSrc ?? ''}`}
         alt={mascotData?.mascotName ?? 'Unknown'}
         className={styles.vercelLogo}
-        width={100}
-        height={24}
+        width={300}
+        height={300}
         priority
       />
+      <p>{mascotData?.mascotName}</p>
+      <p>{mascotData?.collegeName} • {mascotData?.rank}</p>
     </button>
   )
 }
