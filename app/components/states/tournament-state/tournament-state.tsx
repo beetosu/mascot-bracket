@@ -1,6 +1,6 @@
 "use client";
 
-import { Dispatch, SetStateAction, useState } from 'react'
+import { useState } from 'react'
 import styles from './tournament-state.module.css'
 import MascotStore, { MascotData } from '@/app/common/mascot-store';
 import MascotCard from '@/app/components/mascot-card/mascot-card';
