@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { CollegeCoordinates } from '../states/win-state/win-state';
 
-export default function Bracket({collegeCoordinates}: { collegeCoordinates: CollegeCoordinates }) {
+export default function Bracket({collegeCoordinates}: { collegeCoordinates: CollegeCoordinates[] }) {
 	const canvasRef = useRef<HTMLCanvasElement | null>(null)
 
 	useEffect(() => {
@@ -17,12 +17,14 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 			ctx.drawImage(base, 0, 0);
 
 			// draw the college names on top of the background image
-			for (const [college, coordinates] of Object.entries(collegeCoordinates)) {
-				ctx.fillText(college, coordinates.x, coordinates.y);
+			for (const c of collegeCoordinates) {
+				ctx.fillText(c.college, c.x, c.y);
 			}
 		}
 		base.src = '/bracket.png';		
 	});
+
+	console.log(collegeCoordinates);
 
   return (
     <canvas ref={canvasRef} width={1000} height={700} />
