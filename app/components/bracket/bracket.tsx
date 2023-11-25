@@ -1,7 +1,7 @@
-import { MascotData } from '@/app/common/mascot-store'
 import { useEffect, useRef } from 'react'
+import { CollegeCoordinates } from '../states/win-state/win-state';
 
-export default function Bracket({matchHistory}: { matchHistory: string[] }) {
+export default function Bracket({collegeCoordinates}: { collegeCoordinates: CollegeCoordinates }) {
 	const canvasRef = useRef<HTMLCanvasElement | null>(null)
 
 	useEffect(() => {
@@ -15,8 +15,13 @@ export default function Bracket({matchHistory}: { matchHistory: string[] }) {
 		const base = new Image();
 		base.onload = () => {
 			ctx.drawImage(base, 0, 0);
+
+			// draw the college names on top of the background image
+			for (const [college, coordinates] of Object.entries(collegeCoordinates)) {
+				ctx.fillText(college, coordinates.x, coordinates.y);
+			}
 		}
-		base.src = '/bracket.png';
+		base.src = '/bracket.png';		
 	});
 
   return (

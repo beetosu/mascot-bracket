@@ -14,9 +14,23 @@ export type ExtraData = {
   matchHistory?: string[]
 }
 
+const TEST_HISTORY = ['Gonzaga', 'Georgia St', 'Boise St', 'Memphis', 'UConn', 'New Mexico St', 'Arkansas', 
+'Vermont', 'Alabama', 'Rutgers / Notre Dame', 'Texas Tech', 'Montana St', 'Michigan St', 'Davidson', 'Duke', 
+'Cal St Fullerton', 'Baylor', 'Norfolk St', 'North Carolina', 'Marquette', "Saint Mary's", 'Wyoming / Indiana', 
+'UCLA', 'Akron', 'Texas', 'Virginia Tech', 'Purdue', 'Yale', 'Murray St', 'San Francisco', 'Kentucky', "St Peter's", 
+'Arizona', 'Wright St / Bryant', 'Seton Hall', 'TCU', 'Houston', 'UAB', 'Illinois', 'Chattanooga', 'Colorado St', 'Michigan', 
+'Tennessee', 'Longwood', 'Ohio St', 'Loyola Chicago', 'Villanova', 'Delaware', 'Kansas', 'Texas Southern / Texas A&M CC', 
+'San Diego St', 'Creighton', 'Iowa', 'Richmond', 'Providence', 'S Dakota St', 'LSU', 'Iowa St', 'Wisconsin', 'Colgate', 
+'USC', 'Miami (FL)', 'Auburn', 'Jacksonville St.', 'Gonzaga', 'Boise St', 'UConn', 'Arkansas', 'Alabama', 'Texas Tech', 
+'Michigan St', 'Duke', 'Baylor', 'North Carolina', "Saint Mary's", 'UCLA', 'Texas', 'Purdue', 'Murray St', 'Kentucky', 
+'Arizona', 'Seton Hall', 'Houston', 'Illinois', 'Colorado St', 'Tennessee', 'Ohio St', 'Villanova', 'Kansas', 'San Diego St',
+'Iowa', 'Providence', 'LSU', 'Wisconsin', 'USC', 'Auburn', 'Gonzaga', 'UConn', 'Alabama', 'Michigan St', 'Baylor', "Saint Mary's",
+'Texas', 'Murray St', 'Arizona', 'Houston', 'Colorado St', 'Ohio St', 'Kansas', 'Iowa', 'LSU', 'USC', 'Gonzaga', 'Alabama',
+'Baylor', 'Texas', 'Arizona', 'Colorado St', 'Kansas', 'LSU', 'Gonzaga', 'Baylor', 'Arizona', 'Kansas', 'Gonzaga', 'Arizona', 'Gonzaga'];
+
 export default function Home() {
-  const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Tournament);
-  const [matchHistory, updateMatchHistory] = useState<string[]>(MascotStore.map(m => m.collegeName));
+  const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Win);
+  const [matchHistory, updateMatchHistory] = useState<string[]>(TEST_HISTORY); //MascotStore.map(m => m.collegeName));
 
   /**
    * Transition the game from one state to another.
@@ -33,7 +47,7 @@ export default function Home() {
           return;
         }
 
-        matchHistory.push(...extraData.matchHistory)
+        matchHistory.push(...extraData.matchHistory);
         updateMatchHistory(matchHistory);
         break;
       default:
