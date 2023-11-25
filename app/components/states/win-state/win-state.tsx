@@ -1,4 +1,5 @@
 import { MascotData } from '@/app/common/mascot-store';
+import Bracket from '../../bracket/bracket';
 
 type WinStateProps = { 
   winner: MascotData,
@@ -7,9 +8,8 @@ type WinStateProps = {
 
 export default function WinState({ winner, matchHistory }: WinStateProps ) {
   return (
-    <div>
-        <p>{winner.collegeName} wins x3</p>
-        <p>look at these winz: {matchHistory}</p>
-    </div>
+    <Bracket 
+      matchHistory={matchHistory}
+    />
   )
 }
