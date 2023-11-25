@@ -1,7 +1,7 @@
 import { MascotData } from '@/app/common/mascot-store'
 import { useEffect, useRef } from 'react'
 
-export default function Bracket({matchHistory}: { matchHistory: string }) {
+export default function Bracket({matchHistory}: { matchHistory: string[] }) {
 	const canvasRef = useRef<HTMLCanvasElement | null>(null)
 
 	useEffect(() => {
@@ -11,6 +11,7 @@ export default function Bracket({matchHistory}: { matchHistory: string }) {
     const ctx = canvas.getContext('2d');
 		if (ctx === null) return;
 
+		// set bracket as background image
 		const base = new Image();
 		base.onload = () => {
 			ctx.drawImage(base, 0, 0);

@@ -2,19 +2,40 @@
 
 import { Dispatch, SetStateAction, useState } from 'react'
 import styles from './tournament-state.module.css'
-import { MascotData } from '@/app/common/mascot-store';
+import MascotStore, { MascotData } from '@/app/common/mascot-store';
 import MascotCard from '@/app/components/mascot-card/mascot-card';
 import { ExtraData, MatchQueue } from '@/app/page';
 import GameStateEnum from '@/app/common/game-state-enum';
 
 type TournamentStateProps = { 
-  matchQueue: MatchQueue,
-  updateMatchQueue: Dispatch<SetStateAction<MatchQueue>>,
   handleGameStateTransition: (upcomingGameState: GameStateEnum, extraData?: ExtraData) => void
 }
 
-export default function TournamentState({ matchQueue, updateMatchQueue, handleGameStateTransition }: TournamentStateProps ) {
-  let [matchHistory, updateMatchHistory] = useState<string>('');
+/**
+ * Create a queue of matches for each college in the store.
+ * @returns A list of tuples of colleges, paired based on placement in the store.
+ */
+function generateMatchQueue(): MatchQueue {
+  // PRECONDITIONS:
+  // The MatchStore has an odd number of elements, which it should if it's valid info)
+
+  let queue: MatchQueue = [];
+
+  for (let i = 0; i < MascotStore.length; i += 2) {
+    const match: [MascotData, MascotData] = [MascotStore[i], MascotStore[i + 1]];
+    queue.push(match);
+  }
+
+  return queue;
+}
+
+export default function TournamentState({ handleGameStateTransition }: TournamentStateProps ) {
+  const initialMatchQueue = generateMatchQueue();
+  const [matchQueue, updateMatchQueue] = useState<MatchQueue>(initialMatchQueue);
+  const [leftMatch, updateLeftMatch] = useState<MascotData>(initialMatchQueue[0][0]);
+  const [rightMatch, updateRightMatch] = useState<MascotData | undefined>(initialMatchQueue[0][1]);
+
+  const [matchHistory, updateMatchHistory] = useState<string[]>([]);
   
   /**
    * Advance the match queue forward.
@@ -30,32 +51,30 @@ export default function TournamentState({ matchQueue, updateMatchQueue, handleGa
       matchQueue.push([winner, undefined]);
     }
 
-    const lastMatch = matchQueue.shift();
-    const winnerIdx = lastMatch?.findIndex(m => m?.id === winner.id) ?? 0;
+    matchQueue.shift();
 
-    matchHistory += winnerIdx.toString();
+    matchHistory.push(winner.collegeName);
     updateMatchHistory(matchHistory);
+
     updateMatchQueue(matchQueue);
+    updateLeftMatch(matchQueue[0][0])
+    updateRightMatch(matchQueue[0][1])
 
     if (matchQueue.length === 1 && matchQueue[0][1] === undefined) {
       handleGameStateTransition(GameStateEnum.Win, { matchHistory });
     }
   }
 
-  const currentMatch = matchQueue[0]
-  const leftMascot = currentMatch[0];
-  const rightMascot = currentMatch[1];
-
   return (
     <div className={styles.gameState}>
       <MascotCard 
-        key={leftMascot.id}
-        mascotData={leftMascot}
+        key={leftMatch.id}
+        mascotData={leftMatch}
         handleQueueUpdate={handleQueueUpdate}
       />
       <MascotCard 
-        key={rightMascot?.id ?? -1}
-        mascotData={rightMascot}
+        key={rightMatch?.id ?? -1}
+        mascotData={rightMatch}
         handleQueueUpdate={handleQueueUpdate}
       />
     </div>
