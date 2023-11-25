@@ -233,6 +233,230 @@ const MascotStore: MascotData[] = [
         imgSrc: 'georgiastate.jpg',
         rank: 15
     },
+    {
+        id: CollegeEnum.Arizona,
+        collegeName: 'Arizona',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 1
+    },
+    {
+        id: CollegeEnum.WrightStBryant,
+        collegeName: 'Wright St / Bryant',
+        mascotName: 'Fake Mascot / Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 16
+    },
+    {
+        id: CollegeEnum.SetonHall,
+        collegeName: 'Seton Hall',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 8
+    },
+    {
+        id: CollegeEnum.TCU,
+        collegeName: 'TCU',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 9
+    },
+    {
+        id: CollegeEnum.Houston,
+        collegeName: 'Houston',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 5
+    },
+    {
+        id: CollegeEnum.UAB,
+        collegeName: 'UAB',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 12
+    },
+    {
+        id: CollegeEnum.Illinois,
+        collegeName: 'Illinois',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 4
+    },
+    {
+        id: CollegeEnum.Chattanooga,
+        collegeName: 'Chattanooga',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 13
+    },
+    {
+        id: CollegeEnum.ColoradoSt,
+        collegeName: 'Colorado St',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 6
+    },
+    {
+        id: CollegeEnum.Michigan,
+        collegeName: 'Michigan',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 11
+    },
+    {
+        id: CollegeEnum.Tennessee,
+        collegeName: 'Tennessee',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 3
+    },
+    {
+        id: CollegeEnum.Longwood,
+        collegeName: 'Longwood',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 14
+    },
+    {
+        id: CollegeEnum.OhioSt,
+        collegeName: 'Ohio St',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 7
+    },
+    {
+        id: CollegeEnum.LoyolaChicago,
+        collegeName: 'Loyola Chicago',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 10
+    },
+    {
+        id: CollegeEnum.Villanova,
+        collegeName: 'Villanova',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 2
+    },
+    {
+        id: CollegeEnum.Delaware,
+        collegeName: 'Delaware',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 15
+    },
+    {
+        id: CollegeEnum.Kansas,
+        collegeName: 'Kansas',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 1
+    },
+    {
+        id: CollegeEnum.TexasSouthernAMCC,
+        collegeName: 'Texas Southern / Texas A&M CC',
+        mascotName: 'Fake Mascot / Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 16
+    },
+    {
+        id: CollegeEnum.SanDiegoSt,
+        collegeName: 'San Diego St',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 8
+    },
+    {
+        id: CollegeEnum.Creighton,
+        collegeName: 'Creighton',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 9
+    },
+    {
+        id: CollegeEnum.Iowa,
+        collegeName: 'Iowa',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 5
+    },
+    {
+        id: CollegeEnum.Richmond,
+        collegeName: 'Richmond',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 12
+    },
+    {
+        id: CollegeEnum.Providence,
+        collegeName: 'Providence',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 4
+    },
+    {
+        id: CollegeEnum.SDakotaSt,
+        collegeName: 'S Dakota St',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 13
+    },
+    {
+        id: CollegeEnum.LSU,
+        collegeName: 'LSU',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 6
+    },
+    {
+        id: CollegeEnum.IowaSt,
+        collegeName: 'Iowa St',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 11
+    },
+    {
+        id: CollegeEnum.Wisconsin,
+        collegeName: 'Wisconsin',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 3
+    },
+    {
+        id: CollegeEnum.Colgate,
+        collegeName: 'Colgate',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 14
+    },
+    {
+        id: CollegeEnum.USC,
+        collegeName: 'USC',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 7
+    },
+    {
+        id: CollegeEnum.Miami,
+        collegeName: 'Miami (FL)',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 10
+    },
+    {
+        id: CollegeEnum.Auburn,
+        collegeName: 'Auburn',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'gonzaga.jpg',
+        rank: 2
+    },
+    {
+        id: CollegeEnum.JacksonvilleSt,
+        collegeName: 'Jacksonville St.',
+        mascotName: 'Fake Mascot',
+        imgSrc: 'georgiastate.jpg',
+        rank: 15
+    },
 ]
 
 export default MascotStore
