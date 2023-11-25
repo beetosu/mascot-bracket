@@ -1,5 +1,5 @@
 import Bracket from '@/app/components/bracket/bracket';
-import TournamentRound, { getNextRound, getXStep } from '@/app/common/tournament-round-enum';
+import TournamentRound, { getNextRound, getXStep, getYGap, getYStart, getYStep } from '@/app/common/tournament-round-enum';
 
 type WinStateProps = { 
   matchHistory: string[]
@@ -47,8 +47,21 @@ function determineX(idx: number): number {
 }
 
 function determineY(idx: number): number {
-  const round = determineRound(idx);
-  return idx * 5;
+  const currentRound = determineRound(idx);
+  const nextRound = getNextRound(currentRound);
+
+  if (!nextRound) return 350;
+
+  const midpoint = (nextRound - currentRound) / 2;
+  const quarterpoint = midpoint / 2;
+  const relativePosition = (idx - currentRound) % midpoint;
+  
+  let y = getYStart(currentRound) + (relativePosition * getYStep(currentRound));
+  if (relativePosition !== relativePosition % quarterpoint) {
+    y += getYGap(currentRound)
+  }
+  
+  return y;
 }
 
 function determineRound(idx: number): TournamentRound {

@@ -34,6 +34,48 @@ export function getXStep(currentRound: TournamentRound): number {
     case TournamentRound.First:
       return 25;
     case TournamentRound.Second:
+      return 100;
+    case TournamentRound.Sixteen:
+      return 175;
+    case TournamentRound.Eight:
+      return 250;
+    case TournamentRound.Eight:
+      return 325;
+    case TournamentRound.Four:
+      return 400;
+    case TournamentRound.Championship:
+      return 475;
+    default:
+      return 500;
+  }
+}
+
+export function getYStart(currentRound: TournamentRound): number {
+  switch (currentRound) {
+    case TournamentRound.First:
+      return 25;
+    case TournamentRound.Second:
+      return 100;
+    case TournamentRound.Sixteen:
+      return 175;
+    case TournamentRound.Eight:
+      return 250;
+    case TournamentRound.Eight:
+      return 325;
+    case TournamentRound.Four:
+      return 400;
+    case TournamentRound.Championship:
+      return 475;
+    default:
+      return 500;
+  }
+}
+
+export function getYGap(currentRound: TournamentRound): number {
+  switch (currentRound) {
+    case TournamentRound.First:
+      return 25;
+    case TournamentRound.Second:
       return 50;
     case TournamentRound.Sixteen:
       return 75;
@@ -46,7 +88,28 @@ export function getXStep(currentRound: TournamentRound): number {
     case TournamentRound.Championship:
       return 175;
     default:
-      return 200;
+      return 0;
+  }
+}
+
+export function getYStep(currentRound: TournamentRound): number {
+  switch (currentRound) {
+    case TournamentRound.First:
+      return 15;
+    case TournamentRound.Second:
+      return 20;
+    case TournamentRound.Sixteen:
+      return 25;
+    case TournamentRound.Eight:
+      return 30;
+    case TournamentRound.Eight:
+      return 35;
+    case TournamentRound.Four:
+      return 40;
+    case TournamentRound.Championship:
+      return 45;
+    default:
+      return 0;
   }
 }
 
