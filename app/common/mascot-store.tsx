@@ -40,7 +40,7 @@ const MascotStore: MascotData[] = [
     },
     {
         id: CollegeEnum.WrightSt,
-        collegeName: 'Wyoming',
+        collegeName: 'WrightSt',
         mascotName: 'Mascot Name',
         imgSrc: 'gonzaga.jpg',
         rank: 16
@@ -134,7 +134,8 @@ const MascotStore: MascotData[] = [
         collegeName: 'Unknown',
         mascotName: 'Unknown',
         imgSrc: 'gonzaga.jpg',
-        rank: 11
+        rank: 11,
+        firstFour: 3
     },
     {
         id: CollegeEnum.TexasTech,

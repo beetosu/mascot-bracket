@@ -14,23 +14,33 @@ export type ExtraData = {
   matchHistory?: string[]
 }
 
-const TEST_HISTORY = ['Gonzaga', 'Georgia St', 'Boise St', 'Memphis', 'UConn', 'New Mexico St', 'Arkansas', 
-'Vermont', 'Alabama', 'Rutgers / Notre Dame', 'Texas Tech', 'Montana St', 'Michigan St', 'Davidson', 'Duke', 
-'Cal St Fullerton', 'Baylor', 'Norfolk St', 'North Carolina', 'Marquette', "Saint Mary's", 'Wyoming / Indiana', 
-'UCLA', 'Akron', 'Texas', 'Virginia Tech', 'Purdue', 'Yale', 'Murray St', 'San Francisco', 'Kentucky', "St Peter's", 
-'Arizona', 'Wright St / Bryant', 'Seton Hall', 'TCU', 'Houston', 'UAB', 'Illinois', 'Chattanooga', 'Colorado St', 'Michigan', 
-'Tennessee', 'Longwood', 'Ohio St', 'Loyola Chicago', 'Villanova', 'Delaware', 'Kansas', 'Texas Southern / Texas A&M CC', 
-'San Diego St', 'Creighton', 'Iowa', 'Richmond', 'Providence', 'S Dakota St', 'LSU', 'Iowa St', 'Wisconsin', 'Colgate', 
-'USC', 'Miami (FL)', 'Auburn', 'Jacksonville St.', 'Gonzaga', 'Boise St', 'UConn', 'Arkansas', 'Alabama', 'Texas Tech', 
-'Michigan St', 'Duke', 'Baylor', 'North Carolina', "Saint Mary's", 'UCLA', 'Texas', 'Purdue', 'Murray St', 'Kentucky', 
-'Arizona', 'Seton Hall', 'Houston', 'Illinois', 'Colorado St', 'Tennessee', 'Ohio St', 'Villanova', 'Kansas', 'San Diego St',
-'Iowa', 'Providence', 'LSU', 'Wisconsin', 'USC', 'Auburn', 'Gonzaga', 'UConn', 'Alabama', 'Michigan St', 'Baylor', "Saint Mary's",
-'Texas', 'Murray St', 'Arizona', 'Houston', 'Colorado St', 'Ohio St', 'Kansas', 'Iowa', 'LSU', 'USC', 'Gonzaga', 'Alabama',
-'Baylor', 'Texas', 'Arizona', 'Colorado St', 'Kansas', 'LSU', 'Gonzaga', 'Baylor', 'Arizona', 'Kansas', 'Gonzaga', 'Arizona', 'Gonzaga'];
+/**
+ * Rework the generated match history into the format the bracket expects
+ * @param matchHistory The raw match history from the tournament stage
+ * @returns A match history which looks like [first four], [first round,
+ * where winners of first four replace "Unknown"], [second round], etc.
+ */
+function formatMatchHistory(matchHistory: string[]): string[] {
+  const mascotStore = MascotStore;
+  // for the first four winners, add their names in the appropriate slots
+  // in the mascot store (which here represents the first four and the first round)
+  for (let i = 0; i < 4; i++) {
+    const firstFourWinnerName = matchHistory.shift();
+    const unknownToReplaceIdx = mascotStore.findIndex(m => m.firstFour === i);
+
+    if (firstFourWinnerName === undefined || unknownToReplaceIdx === -1) continue;
+    mascotStore[unknownToReplaceIdx].collegeName = firstFourWinnerName;
+  }
+
+  const collegeNames = mascotStore.map(m => m.collegeName);
+  collegeNames.push(...matchHistory);
+
+  return collegeNames;
+}
 
 export default function Home() {
   const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Tournament);
-  const [matchHistory, updateMatchHistory] = useState<string[]>(MascotStore.map(m => m.collegeName));
+  const [matchHistory, updateMatchHistory] = useState<string[]>([]);
 
   /**
    * Transition the game from one state to another.
@@ -47,8 +57,8 @@ export default function Home() {
           return;
         }
 
-        matchHistory.push(...extraData.matchHistory);
-        updateMatchHistory(matchHistory);
+        const updatedMatchHistory = formatMatchHistory(extraData.matchHistory);
+        updateMatchHistory(updatedMatchHistory);
         break;
       default:
         updateGameState(GameStateEnum.Unknown);

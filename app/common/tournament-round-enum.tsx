@@ -1,11 +1,24 @@
 enum TournamentRound {
-	First = 0,
-	Second = 64,
-	Sixteen = 96,
-	Eight = 112,
-	Four = 120,
-	Championship = 124,
-	Winner = 126
+  FirstFour = 0,
+	First = 8,
+	Second = 72,
+	Sixteen = 104,
+	Eight = 120,
+	FinalFour = 128,
+	Championship = 132,
+	Winner = 134
+}
+
+/**
+ * Determine which round a college is currently in.
+ * @param idx The index of the college in the match history.
+ * @returns The round the college is in.
+ */
+export function determineRound(idx: number): TournamentRound {
+  const enumValues = Object.values(TournamentRound).filter(t => typeof t === 'number') as TournamentRound[];
+  
+  // Find the round with the smallest value that the college has past the bounds of.
+  return enumValues.findLast(e => e <= idx) ?? TournamentRound.First;
 }
 
 /**
@@ -15,6 +28,8 @@ enum TournamentRound {
  */
 export function getNextRound(currentRound: TournamentRound): TournamentRound | null {
   switch (currentRound) {
+    case TournamentRound.FirstFour:
+      return TournamentRound.First
     case TournamentRound.First:
       return TournamentRound.Second;
     case TournamentRound.Second:
@@ -22,10 +37,8 @@ export function getNextRound(currentRound: TournamentRound): TournamentRound | n
     case TournamentRound.Sixteen:
       return TournamentRound.Eight;
     case TournamentRound.Eight:
-      return TournamentRound.Four;
-    case TournamentRound.Eight:
-      return TournamentRound.Four;
-    case TournamentRound.Four:
+      return TournamentRound.FinalFour;
+    case TournamentRound.FinalFour:
       return TournamentRound.Championship;
     case TournamentRound.Championship:
       return TournamentRound.Winner
@@ -49,7 +62,7 @@ export function getXStep(currentRound: TournamentRound): number {
       return 410;
     case TournamentRound.Eight:
       return 590;
-    case TournamentRound.Four:
+    case TournamentRound.FinalFour:
       return 780;
     case TournamentRound.Championship:
       return 695;
@@ -73,7 +86,7 @@ export function getYStart(currentRound: TournamentRound): number {
       return 190;
     case TournamentRound.Eight:
       return 250;
-    case TournamentRound.Four:
+    case TournamentRound.FinalFour:
       return 370;
     case TournamentRound.Championship:
       return 628;
@@ -97,7 +110,7 @@ export function getYStep(currentRound: TournamentRound): number {
       return 121;
     case TournamentRound.Eight:
       return 245;
-    case TournamentRound.Four:
+    case TournamentRound.FinalFour:
       return 520;
     case TournamentRound.Championship:
       return 0;

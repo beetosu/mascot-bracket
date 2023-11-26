@@ -1,5 +1,5 @@
 import Bracket from '@/app/components/bracket/bracket';
-import TournamentRound, { getNextRound, getXStep, getYGap, getYStart, getYStep } from '@/app/common/tournament-round-enum';
+import TournamentRound, { determineRound, getNextRound, getXStep, getYGap, getYStart, getYStep } from '@/app/common/tournament-round-enum';
 
 type WinStateProps = { 
   matchHistory: string[]
@@ -80,18 +80,6 @@ function determineY(idx: number): number {
   }
   
   return y;
-}
-
-/**
- * Determine which round a college is currently in.
- * @param idx The index of the college in the match history.
- * @returns The round the college is in.
- */
-function determineRound(idx: number): TournamentRound {
-  const enumValues = Object.values(TournamentRound).filter(t => typeof t === 'number') as TournamentRound[];
-  
-  // Find the round with the smallest value that the college has past the bounds of.
-  return enumValues.findLast(e => e <= idx) ?? TournamentRound.First;
 }
 
 /**

@@ -44,11 +44,16 @@ export default function TournamentState({ handleGameStateTransition }: Tournamen
   function handleQueueUpdate(winner: MascotData): void {
     const lastElement = matchQueue.length - 1;
 
-    // Either create a new match, or pair an existing match with an opponent.
-    if (matchQueue[lastElement][1] === undefined) {
-      matchQueue[lastElement][1] = winner;
+    if (matchHistory.length < 4) {
+      const matchToFillIdx = matchQueue.findIndex(m => m[1]?.firstFour === matchHistory.length);
+      matchQueue[matchToFillIdx][1] = winner;
     } else {
-      matchQueue.push([winner, undefined]);
+      // Either create a new match, or pair an existing match with an opponent.
+      if (matchQueue[lastElement][1] === undefined) {
+        matchQueue[lastElement][1] = winner;
+      } else {
+        matchQueue.push([winner, undefined]);
+      }
     }
 
     matchQueue.shift();
