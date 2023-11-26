@@ -40,14 +40,14 @@ const MascotStore: MascotData[] = [
     },
     {
         id: CollegeEnum.WrightSt,
-        collegeName: 'WrightSt',
+        collegeName: 'Wright St',
         mascotName: 'Mascot Name',
         imgSrc: 'gonzaga.jpg',
         rank: 16
     },
     {
-        id: CollegeEnum.Indiana,
-        collegeName: 'Indiana',
+        id: CollegeEnum.Bryant,
+        collegeName: 'Bryant',
         mascotName: 'Mascot Name',
         imgSrc: 'georgiastate.jpg',
         rank: 16
@@ -61,7 +61,7 @@ const MascotStore: MascotData[] = [
     },
     {
         id: CollegeEnum.NotreDame,
-        collegeName: 'NotreDame',
+        collegeName: 'Notre Dame',
         mascotName: 'Mascot Name',
         imgSrc: 'georgiastate.jpg',
         rank: 11

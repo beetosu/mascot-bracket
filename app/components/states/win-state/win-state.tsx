@@ -40,6 +40,8 @@ function determineX(idx: number): number {
   const currentRound = determineRound(idx);
   const canvasWidth = 1918;
 
+  if (currentRound === TournamentRound.FirstFour) return determineFirstFourX(idx);
+
   // x here is either xStep, or the width of the bracket
   // minus xStep, based on whether the college is on the left
   // or right hand side.
@@ -61,6 +63,7 @@ function determineY(idx: number): number {
   const nextRound = getNextRound(currentRound);
 
   if (!nextRound) return getYStart(currentRound);
+  if (currentRound === TournamentRound.FirstFour) return determineFirstFourY(idx);
 
   const midpoint = (nextRound - currentRound) / 2;
   const quarterpoint = midpoint / 2;
@@ -79,6 +82,40 @@ function determineY(idx: number): number {
     y += getYGap(currentRound)
   }
   
+  return y;
+}
+
+/**
+ * Determine the appropriate x value for a first four college.
+ * @param idx The index of the college in the match history. 
+ * @returns a number representing the x value.
+ */
+function determineFirstFourX(idx: number): number {
+  switch (Math.floor(idx / 2)) {
+    case 0:
+      return 550;
+    case 1:
+      return 780;
+    case 2:
+      return 1140; 
+    default:
+      return 1370;
+  }
+}
+
+/**
+ * Determine the appropriate y value for a first four college.
+ * @param idx The index of the college in the match history. 
+ * @returns a number representing the y value.
+ */
+function determineFirstFourY(idx: number): number {
+  let y = 1180;
+  const yStep = 30;
+
+  // if the college is on the bottom of the bracket, add the step.
+  if (idx % 2 === 1) {
+    y += yStep;
+  }
   return y;
 }
 
