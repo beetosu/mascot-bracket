@@ -71,11 +71,13 @@ export default function TournamentState({ handleGameStateTransition }: Tournamen
         key={leftMatch.id}
         mascotData={leftMatch}
         handleQueueUpdate={handleQueueUpdate}
+        isLeft={true}
       />
       <MascotCard 
         key={rightMatch?.id ?? -1}
         mascotData={rightMatch}
         handleQueueUpdate={handleQueueUpdate}
+        isLeft={false}
       />
     </div>
   )

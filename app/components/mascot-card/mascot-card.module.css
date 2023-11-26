@@ -1,0 +1,29 @@
+.mascotButton {
+    align-items: center;
+    background-color: #ccccccaa;
+    border-radius: 4px;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mascotButton.left {
+    box-shadow: -3px 3px 7px #00000044;
+}
+
+.mascotButton.right {
+    box-shadow: 3px 3px 7px #00000044;
+}
+
+.mascotButton figure {
+    margin: 8px;
+}
+
+.mascotButton figure img {
+    border-radius: 4px;
+}
+
+.mascotButton figure .collegeName {
+    font-size: 24px;
+    font-weight: bold;
+}
