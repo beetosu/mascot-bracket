@@ -25,10 +25,10 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 				ctx.fillText(c.college, c.x, c.y);
 			}
 		}
-		base.src = '/bracket2.png';		
+		base.src = '/bracket.png';		
 	});
 
   return (
-    <canvas className={styles.bracket} ref={canvasRef} width={959*2} height={669*2} />
+    <canvas className={styles.bracket} ref={canvasRef} width={1918} height={1338} />
   )
 }

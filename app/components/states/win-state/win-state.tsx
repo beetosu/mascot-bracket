@@ -38,7 +38,7 @@ function generateCoordinates(matchHistory: string[]): CollegeCoordinates[] {
  */
 function determineX(idx: number): number {
   const currentRound = determineRound(idx);
-  const canvasWidth = 959 * 2;
+  const canvasWidth = 1918;
 
   // x here is either xStep, or the width of the bracket
   // minus xStep, based on whether the college is on the left
