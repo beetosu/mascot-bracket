@@ -29,8 +29,8 @@ const TEST_HISTORY = ['Gonzaga', 'Georgia St', 'Boise St', 'Memphis', 'UConn', '
 'Baylor', 'Texas', 'Arizona', 'Colorado St', 'Kansas', 'LSU', 'Gonzaga', 'Baylor', 'Arizona', 'Kansas', 'Gonzaga', 'Arizona', 'Gonzaga'];
 
 export default function Home() {
-  const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Win);
-  const [matchHistory, updateMatchHistory] = useState<string[]>(TEST_HISTORY); //MascotStore.map(m => m.collegeName));
+  const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Tournament);
+  const [matchHistory, updateMatchHistory] = useState<string[]>(MascotStore.map(m => m.collegeName));
 
   /**
    * Transition the game from one state to another.
