@@ -18,6 +18,7 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 
 			// draw the college names on top of the background image
 			for (const c of collegeCoordinates) {
+				c.isRight ? ctx.textAlign = 'right' : ctx.textAlign = 'left';
 				ctx.fillText(c.college, c.x, c.y);
 			}
 		}
@@ -27,6 +28,6 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 	console.log(collegeCoordinates);
 
   return (
-    <canvas ref={canvasRef} width={1000} height={700} />
+    <canvas ref={canvasRef} width={959} height={669} />
   )
 }

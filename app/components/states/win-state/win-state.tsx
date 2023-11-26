@@ -8,7 +8,8 @@ type WinStateProps = {
 export type CollegeCoordinates = {
   college: string,
   x: number,
-  y: number
+  y: number,
+  isRight: boolean
 }
 
 /**
@@ -23,7 +24,8 @@ function generateCoordinates(matchHistory: string[]): CollegeCoordinates[] {
     collegeCoords.push({
       college: college,
       x: determineX(idx),
-      y: determineY(idx)
+      y: determineY(idx),
+      isRight: isRight(idx)
     });
   });
   return collegeCoords;
@@ -36,13 +38,13 @@ function generateCoordinates(matchHistory: string[]): CollegeCoordinates[] {
  */
 function determineX(idx: number): number {
   const currentRound = determineRound(idx);
-  const canvasWidth = 1000;
+  const canvasWidth = 959;
 
   // x here is either xStep, or the width of the bracket
   // minus xStep, based on whether the college is on the left
   // or right hand side.
   let x = getXStep(currentRound);
-  if (isRight(idx, currentRound)) {
+  if (isRight(idx)) {
     x = canvasWidth - x;
   }
 
@@ -98,7 +100,8 @@ function determineRound(idx: number): TournamentRound {
  * @param currentRound The round the college is currently in.
  * @returns A boolean representing if the college should be on the right of the bracket.
  */
-function isRight(idx: number, currentRound: TournamentRound): boolean {
+function isRight(idx: number): boolean {
+  const currentRound = determineRound(idx);
   const nextRound = getNextRound(currentRound);
 
   // Winner should be centered.

@@ -42,21 +42,19 @@ export function getNextRound(currentRound: TournamentRound): TournamentRound | n
 export function getXStep(currentRound: TournamentRound): number {
   switch (currentRound) {
     case TournamentRound.First:
-      return 25;
+      return 30;
     case TournamentRound.Second:
-      return 100;
+      return 110;
     case TournamentRound.Sixteen:
-      return 175;
+      return 200;
     case TournamentRound.Eight:
-      return 250;
-    case TournamentRound.Eight:
-      return 325;
+      return 290;
     case TournamentRound.Four:
-      return 400;
+      return 380;
     case TournamentRound.Championship:
-      return 475;
+      return 430;
     default:
-      return 500;
+      return 460;
   }
 }
 
