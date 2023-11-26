@@ -12,6 +12,8 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
     const ctx = canvas.getContext('2d');
 		if (ctx === null) return;
 
+		ctx.font = "22px Arial";
+
 		// set bracket as background image
 		const base = new Image();
 		base.onload = () => {
@@ -23,12 +25,12 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 				ctx.fillText(c.college, c.x, c.y);
 			}
 		}
-		base.src = '/bracket.png';		
+		base.src = '/bracket2.png';		
 	});
 
 	console.log(collegeCoordinates);
 
   return (
-    <canvas className={styles.bracket} ref={canvasRef} width={959} height={669} />
+    <canvas className={styles.bracket} ref={canvasRef} width={959*2} height={669*2} />
   )
 }
