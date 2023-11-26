@@ -5,10 +5,67 @@ export type MascotData = {
     collegeName: string,
     mascotName: string,
     imgSrc: string,
-    rank: number
+    rank: number,
+    firstFour?: number
 }
 
 const MascotStore: MascotData[] = [
+    {
+        id: CollegeEnum.TexasSouthern,
+        collegeName: 'Texas Southern',
+        mascotName: 'Mascot Name',
+        imgSrc: 'gonzaga.jpg',
+        rank: 16
+    },
+    {
+        id: CollegeEnum.TexasAMCC,
+        collegeName: 'Texas A&M CC',
+        mascotName: 'Mascot Name',
+        imgSrc: 'georgiastate.jpg',
+        rank: 16
+    },
+    {
+        id: CollegeEnum.Wyoming,
+        collegeName: 'Wyoming',
+        mascotName: 'Mascot Name',
+        imgSrc: 'gonzaga.jpg',
+        rank: 12
+    },
+    {
+        id: CollegeEnum.Indiana,
+        collegeName: 'Indiana',
+        mascotName: 'Mascot Name',
+        imgSrc: 'georgiastate.jpg',
+        rank: 12
+    },
+    {
+        id: CollegeEnum.WrightSt,
+        collegeName: 'Wyoming',
+        mascotName: 'Mascot Name',
+        imgSrc: 'gonzaga.jpg',
+        rank: 16
+    },
+    {
+        id: CollegeEnum.Indiana,
+        collegeName: 'Indiana',
+        mascotName: 'Mascot Name',
+        imgSrc: 'georgiastate.jpg',
+        rank: 16
+    },
+    {
+        id: CollegeEnum.Rutgers,
+        collegeName: 'Rutgers',
+        mascotName: 'Mascot Name',
+        imgSrc: 'gonzaga.jpg',
+        rank: 11
+    },
+    {
+        id: CollegeEnum.NotreDame,
+        collegeName: 'NotreDame',
+        mascotName: 'Mascot Name',
+        imgSrc: 'georgiastate.jpg',
+        rank: 11
+    },
     {
         id: CollegeEnum.Gonzaga,
         collegeName: 'Gonzaga',
@@ -73,9 +130,9 @@ const MascotStore: MascotData[] = [
         rank: 6
     },
     {
-        id: CollegeEnum.RutgersNotreDame,
-        collegeName: 'Rutgers / Notre Dame',
-        mascotName: 'Fake Mascot / Fake Mascot',
+        id: CollegeEnum.Unknown,
+        collegeName: 'Unknown',
+        mascotName: 'Unknown',
         imgSrc: 'gonzaga.jpg',
         rank: 11
     },
@@ -157,11 +214,12 @@ const MascotStore: MascotData[] = [
         rank: 5
     },
     {
-        id: CollegeEnum.WyomingIndiana,
-        collegeName: 'Wyoming / Indiana',
-        mascotName: 'Fake Mascot',
+        id: CollegeEnum.Unknown,
+        collegeName: 'Unknown',
+        mascotName: 'Unknown',
         imgSrc: 'georgiastate.jpg',
-        rank: 12
+        rank: 12,
+        firstFour: 1
     },
     {
         id: CollegeEnum.UCLA,
@@ -241,11 +299,12 @@ const MascotStore: MascotData[] = [
         rank: 1
     },
     {
-        id: CollegeEnum.WrightStBryant,
-        collegeName: 'Wright St / Bryant',
-        mascotName: 'Fake Mascot / Fake Mascot',
+        id: CollegeEnum.Unknown,
+        collegeName: 'Unknown',
+        mascotName: 'Unknown',
         imgSrc: 'georgiastate.jpg',
-        rank: 16
+        rank: 16,
+        firstFour: 2
     },
     {
         id: CollegeEnum.SetonHall,
@@ -353,11 +412,12 @@ const MascotStore: MascotData[] = [
         rank: 1
     },
     {
-        id: CollegeEnum.TexasSouthernAMCC,
-        collegeName: 'Texas Southern / Texas A&M CC',
-        mascotName: 'Fake Mascot / Fake Mascot',
+        id: CollegeEnum.Unknown,
+        collegeName: 'Unknown',
+        mascotName: 'Unknown',
         imgSrc: 'georgiastate.jpg',
-        rank: 16
+        rank: 16,
+        firstFour: 0
     },
     {
         id: CollegeEnum.SanDiegoSt,
