@@ -15,15 +15,47 @@
     box-shadow: 3px 3px 7px #00000044;
 }
 
-.mascotButton figure {
+.mascotButton .imageContainer {
     margin: 8px;
+    width: 300px;
 }
 
-.mascotButton figure img {
+.mascotButton .imageContainer img {
     border-radius: 4px;
+    width: initial;
+    max-width: 300px;
 }
 
-.mascotButton figure .collegeName {
+.mascotButton .captionContainer .mascotName {
     font-size: 24px;
     font-weight: bold;
+    margin: 0;
+}
+
+.mascotButton .captionContainer .collegeInfo {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 700px) and (max-height: 850px) {
+    .mascotButton .captionContainer {
+        display: flex;
+        gap: 16px;
+    }
+
+    .mascotButton .captionContainer .mascotName,
+    .mascotButton .captionContainer .collegeInfo {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 700px) and (max-height: 725px) {
+    .mascotButton .imageContainer {
+        height: 250px;
+    }
+
+    .mascotButton .imageContainer img {
+        height: initial;
+        max-height: 250px;
+    }
 }

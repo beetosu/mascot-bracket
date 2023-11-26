@@ -14,7 +14,7 @@ export default function MascotCard({mascotData, handleQueueUpdate, isLeft}: Masc
 
   return (
     <button className={styles.mascotButton + ' ' + (isLeft ? styles.left : styles.right) } onClick={selectWinner}>
-      <figure>
+      <div className={styles.imageContainer}>
         <Image
           src={`/mascots/${mascotData?.imgSrc ?? ''}`}
           alt={mascotData?.mascotName ?? 'Unknown'}
@@ -23,11 +23,15 @@ export default function MascotCard({mascotData, handleQueueUpdate, isLeft}: Masc
           height={300}
           priority
         />
-        <figcaption className={styles.collegeName}>
+      </div>
+      <div className={styles.captionContainer}>
+        <p className={styles.mascotName}>
           {mascotData?.mascotName}
-        </figcaption>
-      </figure>
-      <p>{mascotData?.collegeName} • {mascotData?.rank}</p>
+        </p>
+        <p className={styles.collegeInfo}>
+          {mascotData?.collegeName} • {mascotData?.rank}
+        </p>
+      </div>
     </button>
   )
 }
