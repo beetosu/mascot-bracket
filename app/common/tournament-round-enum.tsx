@@ -52,7 +52,7 @@ export function getXStep(currentRound: TournamentRound): number {
     case TournamentRound.Four:
       return 380;
     case TournamentRound.Championship:
-      return 430;
+      return 380;
     default:
       return 460;
   }
@@ -66,21 +66,19 @@ export function getXStep(currentRound: TournamentRound): number {
 export function getYStart(currentRound: TournamentRound): number {
   switch (currentRound) {
     case TournamentRound.First:
-      return 25;
+      return 73;
     case TournamentRound.Second:
-      return 100;
+      return 80;
     case TournamentRound.Sixteen:
-      return 175;
+      return 95;
     case TournamentRound.Eight:
-      return 250;
-    case TournamentRound.Eight:
-      return 325;
+      return 125;
     case TournamentRound.Four:
-      return 400;
+      return 185;
     case TournamentRound.Championship:
-      return 475;
+      return 325;
     default:
-      return 500;
+      return 325;
   }
 }
 
@@ -92,19 +90,17 @@ export function getYStart(currentRound: TournamentRound): number {
 export function getYGap(currentRound: TournamentRound): number {
   switch (currentRound) {
     case TournamentRound.First:
-      return 25;
+      return 20;
     case TournamentRound.Second:
-      return 50;
+      return 20;
     case TournamentRound.Sixteen:
-      return 75;
+      return 20;
     case TournamentRound.Eight:
-      return 100;
-    case TournamentRound.Eight:
-      return 125;
+      return 20;
     case TournamentRound.Four:
-      return 150;
+      return 0;
     case TournamentRound.Championship:
-      return 175;
+      return 0;
     default:
       return 0;
   }
@@ -120,17 +116,15 @@ export function getYStep(currentRound: TournamentRound): number {
     case TournamentRound.First:
       return 15;
     case TournamentRound.Second:
-      return 20;
-    case TournamentRound.Sixteen:
-      return 25;
-    case TournamentRound.Eight:
       return 30;
+    case TournamentRound.Sixteen:
+      return 60;
     case TournamentRound.Eight:
-      return 35;
+      return 120;
     case TournamentRound.Four:
-      return 40;
+      return 260;
     case TournamentRound.Championship:
-      return 45;
+      return 0;
     default:
       return 0;
   }

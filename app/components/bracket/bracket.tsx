@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import styles from './bracket.module.css'
 import { CollegeCoordinates } from '../states/win-state/win-state';
 
 export default function Bracket({collegeCoordinates}: { collegeCoordinates: CollegeCoordinates[] }) {
@@ -28,6 +29,6 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 	console.log(collegeCoordinates);
 
   return (
-    <canvas ref={canvasRef} width={959} height={669} />
+    <canvas className={styles.bracket} ref={canvasRef} width={959} height={669} />
   )
 }

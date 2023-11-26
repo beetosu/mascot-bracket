@@ -60,7 +60,7 @@ function determineY(idx: number): number {
   const currentRound = determineRound(idx);
   const nextRound = getNextRound(currentRound);
 
-  if (!nextRound) return 350;
+  if (!nextRound) return 325;
 
   const midpoint = (nextRound - currentRound) / 2;
   const quarterpoint = midpoint / 2;
