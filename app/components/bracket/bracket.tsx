@@ -28,8 +28,6 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 		base.src = '/bracket2.png';		
 	});
 
-	console.log(collegeCoordinates);
-
   return (
     <canvas className={styles.bracket} ref={canvasRef} width={959*2} height={669*2} />
   )

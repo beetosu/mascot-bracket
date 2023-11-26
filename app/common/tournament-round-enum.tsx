@@ -42,19 +42,19 @@ export function getNextRound(currentRound: TournamentRound): TournamentRound | n
 export function getXStep(currentRound: TournamentRound): number {
   switch (currentRound) {
     case TournamentRound.First:
-      return 30;
+      return 55;
     case TournamentRound.Second:
-      return 110;
+      return 220;
     case TournamentRound.Sixteen:
-      return 200;
+      return 410;
     case TournamentRound.Eight:
-      return 290;
+      return 590;
     case TournamentRound.Four:
-      return 380;
+      return 780;
     case TournamentRound.Championship:
-      return 380;
+      return 695;
     default:
-      return 460;
+      return 915;
   }
 }
 
@@ -66,43 +66,19 @@ export function getXStep(currentRound: TournamentRound): number {
 export function getYStart(currentRound: TournamentRound): number {
   switch (currentRound) {
     case TournamentRound.First:
-      return 73;
+      return 145;
     case TournamentRound.Second:
-      return 80;
+      return 160;
     case TournamentRound.Sixteen:
-      return 95;
+      return 190;
     case TournamentRound.Eight:
-      return 125;
+      return 250;
     case TournamentRound.Four:
-      return 185;
+      return 370;
     case TournamentRound.Championship:
-      return 325;
+      return 628;
     default:
-      return 325;
-  }
-}
-
-/**
- * Map the round enum to a yGap value.
- * @param currentRound The round we want to find the yGap for.
- * @returns The yGap associated with the round.
- */
-export function getYGap(currentRound: TournamentRound): number {
-  switch (currentRound) {
-    case TournamentRound.First:
-      return 20;
-    case TournamentRound.Second:
-      return 20;
-    case TournamentRound.Sixteen:
-      return 20;
-    case TournamentRound.Eight:
-      return 20;
-    case TournamentRound.Four:
-      return 0;
-    case TournamentRound.Championship:
-      return 0;
-    default:
-      return 0;
+      return 628;
   }
 }
 
@@ -114,17 +90,37 @@ export function getYGap(currentRound: TournamentRound): number {
 export function getYStep(currentRound: TournamentRound): number {
   switch (currentRound) {
     case TournamentRound.First:
-      return 15;
+      return 30.5;
     case TournamentRound.Second:
-      return 30;
+      return 60.5;
     case TournamentRound.Sixteen:
-      return 60;
+      return 121;
     case TournamentRound.Eight:
-      return 120;
+      return 245;
     case TournamentRound.Four:
-      return 260;
+      return 520;
     case TournamentRound.Championship:
       return 0;
+    default:
+      return 0;
+  }
+}
+
+/**
+ * Map the round enum to a yGap value.
+ * @param currentRound The round we want to find the yGap for.
+ * @returns The yGap associated with the round.
+ */
+export function getYGap(currentRound: TournamentRound): number {
+  switch (currentRound) {
+    case TournamentRound.First:
+      return 30;
+    case TournamentRound.Second:
+      return 35;
+    case TournamentRound.Sixteen:
+      return 35;
+    case TournamentRound.Eight:
+      return 25;
     default:
       return 0;
   }
