@@ -7,6 +7,15 @@
     flex-direction: column;
 }
 
+.mascotButton:active {
+    background-color: #aaaaaaaa;
+    transform: scale(98%);
+}
+
+.mascotButton:hover {
+    background-color: #bbbbbbaa;
+}
+
 .mascotButton.left {
     box-shadow: -3px 3px 7px #00000044;
 }
@@ -40,6 +49,7 @@
     .mascotButton .captionContainer {
         display: flex;
         gap: 16px;
+        margin-bottom: 8px;
     }
 
     .mascotButton .captionContainer .mascotName,

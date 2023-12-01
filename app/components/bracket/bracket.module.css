@@ -1,4 +1,4 @@
 .bracket {
-    max-height: 95vh;
-    max-width: 95vw;
+    max-height: min(1338px, 95vh);
+    max-width: min(1918px, 95vw);
 }
