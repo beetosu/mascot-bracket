@@ -25,7 +25,7 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 				ctx.fillText(c.college, c.x, c.y);
 			}
 		}
-		base.src = '/bracket.png';		
+		base.src = 'images/bracket.png';		
 	});
 
   return (
