@@ -15,13 +15,12 @@ export default function MascotCard({mascotData, handleQueueUpdate, isLeft}: Masc
   return (
     <button className={styles.mascotButton + ' ' + (isLeft ? styles.left : styles.right) } onClick={selectWinner}>
       <div className={styles.imageContainer}>
-        <Image
-          src={`/mascots/${mascotData?.imgSrc ?? ''}`}
+        <img
+          src={`/images/mascots/${mascotData?.imgSrc ?? ''}`}
           alt={mascotData?.mascotName ?? 'Unknown'}
           className={styles.vercelLogo}
           width={300}
           height={300}
-          priority
         />
       </div>
       <div className={styles.captionContainer}>
