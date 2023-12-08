@@ -2,6 +2,29 @@ import { useEffect, useRef } from 'react'
 import styles from './bracket.module.css'
 import { CollegeCoordinates } from '../states/win-state/win-state';
 
+/**
+ * Draw all of the provided colleges onto the appropriate portions of the canvas.
+ * @param ctx The context of the canvas we are drawing on.
+ * @param collegeCoordinates A list of objects holding college names and 2d positions.
+ */
+function drawCollegeNames(ctx: CanvasRenderingContext2D, collegeCoordinates: CollegeCoordinates[]) {
+	for (const c of collegeCoordinates) {
+		c.isRight ? ctx.textAlign = 'right' : ctx.textAlign = 'left';
+		ctx.fillText(c.college, c.x, c.y);
+	}
+}
+
+/**
+ * Puts the content of the fully generated canvas into the image element.
+ * @param canvas The canvas we are exporting to image.
+ * @param image The image we are exporting the image to (if it exists).
+ */
+function exportCanvasToImage(canvas: HTMLCanvasElement, image: HTMLImageElement | null) {
+	if (image === null) return;
+
+	image.setAttribute('src', canvas.toDataURL('image/png'));
+}
+
 export default function Bracket({collegeCoordinates}: { collegeCoordinates: CollegeCoordinates[] }) {
 	const imageRef = useRef<HTMLImageElement | null>(null);
 
@@ -20,18 +43,8 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 		const base = new Image();
 		base.onload = () => {
 			ctx.drawImage(base, 0, 0);
-
-			// Draw the college names on top of the background image
-			for (const c of collegeCoordinates) {
-				c.isRight ? ctx.textAlign = 'right' : ctx.textAlign = 'left';
-				ctx.fillText(c.college, c.x, c.y);
-			}
-
-			// Once the canvas is fully generated, put the content into the image element.
-			const image = imageRef.current;
-			if (image === null) return;
-
-			image.setAttribute('src', canvas.toDataURL('image/png'));
+			drawCollegeNames(ctx, collegeCoordinates);
+			exportCanvasToImage(canvas, imageRef.current)
 		}
 		base.src = 'images/bracket.png';
 	});
