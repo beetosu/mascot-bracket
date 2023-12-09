@@ -1,23 +1,26 @@
-import Image from 'next/image'
+import CollegeEnum from '@/app/common/college-enum';
 import styles from './mascot-card.module.css'
-import { MascotData } from '@/app/common/mascot-store'
+import BracketInfo from '@/app/common/bracket-info'
+import MascotStore from '@/app/common/mascot-store';
 
 type MascotCardProps = {
-  mascotData: MascotData | undefined,
-  handleQueueUpdate: (winner: MascotData) => void, 
+  bracketInfo: BracketInfo | undefined,
+  handleQueueUpdate: (winner: BracketInfo) => void, 
   isLeft: boolean
 }
 
-export default function MascotCard({mascotData, handleQueueUpdate, isLeft}: MascotCardProps) {
+export default function MascotCard({bracketInfo, handleQueueUpdate, isLeft}: MascotCardProps) {
   // Designate corresponding mascot as winner if selected.
-  function selectWinner(): void { if (mascotData) handleQueueUpdate(mascotData); }
+  function selectWinner(): void { if (bracketInfo) handleQueueUpdate(bracketInfo); }
 
+  const mascotInfo = MascotStore[bracketInfo?.id ?? CollegeEnum.Unknown] 
+  
   return (
     <button className={styles.mascotButton + ' ' + (isLeft ? styles.left : styles.right) } onClick={selectWinner}>
       <div className={styles.imageContainer}>
         <img
-          src={`/images/mascots/${mascotData?.imgSrc ?? ''}`}
-          alt={mascotData?.mascotName ?? 'Unknown'}
+          src={`/images/mascots/${mascotInfo.imgSrc ?? ''}`}
+          alt={mascotInfo.mascotName ?? 'Unknown'}
           className={styles.vercelLogo}
           width={300}
           height={300}
@@ -25,10 +28,10 @@ export default function MascotCard({mascotData, handleQueueUpdate, isLeft}: Masc
       </div>
       <div className={styles.captionContainer}>
         <p className={styles.mascotName}>
-          {mascotData?.mascotName}
+          {mascotInfo.mascotName}
         </p>
         <p className={styles.collegeInfo}>
-          {mascotData?.collegeName} • {mascotData?.rank}
+          {mascotInfo.collegeName} • {bracketInfo?.rank}
         </p>
       </div>
     </button>

@@ -2,16 +2,18 @@
 
 import { useState } from 'react'
 import styles from './page.module.css'
-import MascotStore, { MascotData } from './common/mascot-store'
 import TournamentState from './components/states/tournament-state/tournament-state';
 import GameStateEnum from './common/game-state-enum';
 import WinState from './components/states/win-state/win-state';
 import UnknownState from './components/states/unknown-state/unknown-state';
 import MenuState from './components/states/menu-state/menu-state';
+import mens2022 from './common/tournaments/mens-2022';
+import BracketInfo from './common/bracket-info';
+import CollegeEnum from './common/college-enum';
 
-export type MatchQueue = [MascotData, MascotData?][];
+export type MatchQueue = [BracketInfo, BracketInfo?][];
 export type ExtraData = {
-  matchHistory?: string[]
+  matchHistory?: CollegeEnum[]
 }
 
 /**
@@ -20,27 +22,28 @@ export type ExtraData = {
  * @returns A match history which looks like [first four], [first round,
  * where winners of first four replace "Unknown"], [second round], etc.
  */
-function formatMatchHistory(matchHistory: string[]): string[] {
-  const mascotStore = MascotStore;
+function formatMatchHistory(matchHistory: CollegeEnum[], bracket: BracketInfo[]): CollegeEnum[] {
   // for the first four winners, add their names in the appropriate slots
   // in the mascot store (which here represents the first four and the first round)
   for (let i = 0; i < 4; i++) {
     const firstFourWinnerName = matchHistory.shift();
-    const unknownToReplaceIdx = mascotStore.findIndex(m => m.firstFour === i);
+    const unknownToReplaceIdx = bracket.findIndex(m => m.firstFour === i);
 
     if (firstFourWinnerName === undefined || unknownToReplaceIdx === -1) continue;
-    mascotStore[unknownToReplaceIdx].collegeName = firstFourWinnerName;
+    
+    bracket[unknownToReplaceIdx].id = firstFourWinnerName;
   }
 
-  const collegeNames = mascotStore.map(m => m.collegeName);
-  collegeNames.push(...matchHistory);
+  const fullHistory = bracket.map(m => m.id);
+  fullHistory.push(...matchHistory);
 
-  return collegeNames;
+  return fullHistory;
 }
 
 export default function Home() {
   const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Tournament);
-  const [matchHistory, updateMatchHistory] = useState<string[]>([]);
+  const [matchHistory, updateMatchHistory] = useState<CollegeEnum[]>([]);
+  const bracket = mens2022;
 
   /**
    * Transition the game from one state to another.
@@ -57,7 +60,7 @@ export default function Home() {
           return;
         }
 
-        const updatedMatchHistory = formatMatchHistory(extraData.matchHistory);
+        const updatedMatchHistory = formatMatchHistory(extraData.matchHistory, bracket);
         updateMatchHistory(updatedMatchHistory);
         break;
       default:
@@ -76,6 +79,7 @@ export default function Home() {
         return (
           <TournamentState 
             handleGameStateTransition={handleGameStateTransition}
+            bracket={bracket}
           />
         );
       case GameStateEnum.Win:

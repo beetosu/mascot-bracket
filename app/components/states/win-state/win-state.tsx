@@ -1,8 +1,10 @@
 import Bracket from '@/app/components/bracket/bracket';
 import TournamentRound, { determineRound, getNextRound, getXStep, getYGap, getYStart, getYStep } from '@/app/common/tournament-round-enum';
+import CollegeEnum from '@/app/common/college-enum';
+import MascotStore from '@/app/common/mascot-store';
 
 type WinStateProps = { 
-  matchHistory: string[]
+  matchHistory: CollegeEnum[]
 }
 
 export type CollegeCoordinates = {
@@ -136,9 +138,12 @@ function isRight(idx: number): boolean {
 }
 
 export default function WinState({ matchHistory }: WinStateProps ) {
+
+  const collegeNames = matchHistory.map(m => MascotStore[m].collegeName);
+
   return (
     <Bracket 
-      collegeCoordinates={generateCoordinates(matchHistory)}
+      collegeCoordinates={generateCoordinates(collegeNames)}
     />
   )
 }
