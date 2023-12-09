@@ -35,8 +35,8 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 		const ctx = canvas.getContext('2d');
 		if (ctx === null) return;
 
-		canvas.width = 1918;
-		canvas.height = 1338;
+		canvas.width = 1941;
+		canvas.height = 1500;
 		ctx.font = "22px Arial";
 
 		// Set bracket as background image

@@ -38,7 +38,7 @@ function generateCoordinates(matchHistory: string[]): CollegeCoordinates[] {
  */
 function determineX(idx: number): number {
   const currentRound = determineRound(idx);
-  const canvasWidth = 1918;
+  const canvasWidth = 1941;
 
   if (currentRound === TournamentRound.FirstFour) return determineFirstFourX(idx);
 
@@ -93,13 +93,13 @@ function determineY(idx: number): number {
 function determineFirstFourX(idx: number): number {
   switch (Math.floor(idx / 2)) {
     case 0:
-      return 550;
+      return 560;
     case 1:
-      return 780;
+      return 790;
     case 2:
-      return 1140; 
+      return 1150; 
     default:
-      return 1370;
+      return 1380;
   }
 }
 
@@ -109,7 +109,7 @@ function determineFirstFourX(idx: number): number {
  * @returns a number representing the y value.
  */
 function determineFirstFourY(idx: number): number {
-  let y = 1180;
+  let y = 1320;
   const yStep = 30;
 
   // if the college is on the bottom of the bracket, add the step.
