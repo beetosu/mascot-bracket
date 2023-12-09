@@ -22,12 +22,14 @@ function drawCollegeNames(ctx: CanvasRenderingContext2D, collegeCoordinates: Col
 function exportCanvasToImage(canvas: HTMLCanvasElement, image: HTMLImageElement | null) {
 	if (image === null) return;
 
+	const imageAlt = 'A college basketball bracket, with winners predicted by user using marchmascots.com.';
+
 	image.setAttribute('src', canvas.toDataURL('image/png'));
+	image.setAttribute('alt', imageAlt);
 }
 
 export default function Bracket({collegeCoordinates}: { collegeCoordinates: CollegeCoordinates[] }) {
 	const imageRef = useRef<HTMLImageElement | null>(null);
-	const imageAlt = 'A college basketball bracket, with winners predicted by user using marchmascots.com.';
 
 	useEffect(() => {
 		// Create a canvas which we can draw the bracket onto.
@@ -51,6 +53,6 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 	});
 
   return (
-	<img alt={imageAlt} className={styles.bracket} ref={imageRef} />
+	<img className={styles.bracket} ref={imageRef} />
   )
 }
