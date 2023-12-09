@@ -72,7 +72,6 @@
     }
 
     .mascotButton .imageContainer img {
-        height: initial;
         max-height: 250px;
     }
 }
