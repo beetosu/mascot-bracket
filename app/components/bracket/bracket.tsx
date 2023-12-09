@@ -27,6 +27,7 @@ function exportCanvasToImage(canvas: HTMLCanvasElement, image: HTMLImageElement 
 
 export default function Bracket({collegeCoordinates}: { collegeCoordinates: CollegeCoordinates[] }) {
 	const imageRef = useRef<HTMLImageElement | null>(null);
+	const imageAlt = 'A college basketball bracket, with winners predicted by user using marchmascots.com.';
 
 	useEffect(() => {
 		// Create a canvas which we can draw the bracket onto.
@@ -35,7 +36,7 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 		const ctx = canvas.getContext('2d');
 		if (ctx === null) return;
 
-		canvas.width = 1941;
+		canvas.width = 1918;
 		canvas.height = 1500;
 		ctx.font = "22px Arial";
 
@@ -50,6 +51,6 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 	});
 
   return (
-	<img alt='A college basketball bracket, with winners predicted by user using marchmascots.com.' className={styles.bracket} ref={imageRef} />
+	<img alt={imageAlt} className={styles.bracket} ref={imageRef} />
   )
 }
