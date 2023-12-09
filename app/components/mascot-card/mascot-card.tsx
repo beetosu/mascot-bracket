@@ -30,6 +30,9 @@ export default function MascotCard({bracketInfo, handleQueueUpdate, isLeft}: Mas
         <p className={styles.mascotName}>
           {mascotInfo.mascotName}
         </p>
+        <p className={styles.subtitle}>
+          {mascotInfo.isUnofficial ? '(Unofficial)' : ''}
+        </p>
         <p className={styles.collegeInfo}>
           {mascotInfo.collegeName} • {bracketInfo?.rank}
         </p>

@@ -3,54 +3,55 @@ import CollegeEnum from "./college-enum"
 export type MascotData = {
     collegeName: string,
     mascotName: string,
-    imgSrc: string
+    imgSrc: string,
+    isUnofficial?: boolean
 }
 
 const MascotStore: { [college in CollegeEnum]: MascotData } = {
     [CollegeEnum.Unknown]: {
         collegeName: 'Unknown',
         mascotName: 'Unknown',
-        imgSrc: 'georgiastate.jpg'
+        imgSrc: 'unknown.png'
     },
     [CollegeEnum.TexasSouthern]: {
         collegeName: 'Texas Southern',
-        mascotName: 'Mascot Name',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Tiger',
+        imgSrc: 'texassouthern.gif'
     },
     [CollegeEnum.TexasAMCC]: {
         collegeName: 'Texas A&M CC',
-        mascotName: 'Mascot Name',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Izzy the Islander',
+        imgSrc: 'texasamcc.jpg'
     },
     [CollegeEnum.Wyoming]: {
         collegeName: 'Wyoming',
-        mascotName: 'Mascot Name',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Pistol Pete',
+        imgSrc: 'wyoming.jpg'
     },
     [CollegeEnum.Indiana]: {
         collegeName: 'Indiana',
-        mascotName: 'Mascot Name',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: '[No Mascot]',
+        imgSrc: 'unknown.png'
     },
     [CollegeEnum.WrightSt]: {
         collegeName: 'Wright St',
-        mascotName: 'Mascot Name',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Rowdy Raider',
+        imgSrc: 'wrightst.jpg'
     },
     [CollegeEnum.Bryant]: {
         collegeName: 'Bryant',
-        mascotName: 'Mascot Name',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Tupper',
+        imgSrc: 'bryant.jpg'
     },
     [CollegeEnum.Rutgers]: {
         collegeName: 'Rutgers',
-        mascotName: 'Mascot Name',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Sir Henry',
+        imgSrc: 'rutgers.jpg'
     },
     [CollegeEnum.NotreDame]: {
         collegeName: 'Notre Dame',
-        mascotName: 'Mascot Name',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Leprechauns',
+        imgSrc: 'notredame.jpg'
     },
     [CollegeEnum.Gonzaga]: {
         collegeName: 'Gonzaga',
@@ -64,293 +65,294 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     },
     [CollegeEnum.BoiseSt]: {
         collegeName: 'Boise St',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Buster Bronco',
+        imgSrc: 'boisest.jpg'
     },
     [CollegeEnum.Memphis]: {
         collegeName: 'Memphis',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Pouncer the Tiger',
+        imgSrc: 'memphis.jpg'
     },
     [CollegeEnum.UConn]: {
         collegeName: 'UConn',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Jonthan the Huskey',
+        imgSrc: 'uconn.jpg'
     },
     [CollegeEnum.NewMexicoSt]: {
         collegeName: 'New Mexico St',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Pistol Pete',
+        imgSrc: 'newmexicostate.jpg'
     },
     [CollegeEnum.Arkansas]: {
         collegeName: 'Arkansas',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Big Red & The Pigs',
+        imgSrc: 'arkansas.jpg'
     },
     [CollegeEnum.Vermont]: {
         collegeName: 'Vermont',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Charlie Catamount',
+        imgSrc: 'vermont.jpg'
     },
     [CollegeEnum.Alabama]: {
         collegeName: 'Alabama',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Big Al',
+        imgSrc: 'alabama.jpg'
     },
     [CollegeEnum.TexasTech]: {
         collegeName: 'Texas Tech',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Raider Red',
+        imgSrc: 'texastech.jpg'
     },
     [CollegeEnum.MontanaSt]: {
         collegeName: 'Montana St',
-        mascotName: 'Fake Mascot / Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Spirit the Bobcat',
+        imgSrc: 'montanast.jpg'
     },
     [CollegeEnum.MichiganSt]: {
         collegeName: 'Michigan St',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Sparty',
+        imgSrc: 'michiganst.jpg'
     },
     [CollegeEnum.Davidson]: {
         collegeName: 'Davidson',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Lux the Wildcat',
+        imgSrc: 'davidson.jpg'
     },
     [CollegeEnum.Duke]: {
         collegeName: 'Duke',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Blue Devil',
+        imgSrc: 'duke.jpg'
     },
     [CollegeEnum.CSFullerton]: {
         collegeName: 'Cal St Fullerton',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Tuffy the Titan',
+        imgSrc: 'calstfullerton.jpg'
     },
     [CollegeEnum.Baylor]: {
         collegeName: 'Baylor',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Bruiser and Marigold',
+        imgSrc: 'baylor.jpg'
     },
     [CollegeEnum.NorfolkSt]: {
         collegeName: 'Norfolk St',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Spiro the Spartan',
+        imgSrc: 'norfolkst.jpg'
     },
     [CollegeEnum.NorthCarolina]: {
         collegeName: 'North Carolina',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Rameses',
+        imgSrc: 'northcarolina.jpg'
     },
     [CollegeEnum.Marquette]: {
         collegeName: 'Marquette',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Iggy',
+        imgSrc: 'marquette.jpg'
     },
     [CollegeEnum.StMarys]: {
         collegeName: "Saint Mary's",
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Gideon',
+        imgSrc: 'stmarys.jpeg'
     },
     [CollegeEnum.UCLA]: {
         collegeName: 'UCLA',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Joe and Josie Bruin',
+        imgSrc: 'ucla.jpg'
     },
     [CollegeEnum.Akron]: {
         collegeName: 'Akron',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Zippy',
+        imgSrc: 'akron.png'
     },
     [CollegeEnum.Texas]: {
         collegeName: 'Texas',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Bevo',
+        imgSrc: 'texas.jpg'
     },
     [CollegeEnum.VirginiaTech]: {
         collegeName: 'Virginia Tech',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'HokieBird',
+        imgSrc: 'virginiatech.jpg'
     },
     [CollegeEnum.Purdue]: {
         collegeName: 'Purdue',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Purdue Pete',
+        imgSrc: 'purdue.jpg'
     },
     [CollegeEnum.Yale]: {
         collegeName: 'Yale',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Handsome Dan',
+        imgSrc: 'yale.webp'
     },
     [CollegeEnum.MurraySt]: {
         collegeName: 'Murray St',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Dunker',
+        imgSrc: 'murrayst.jpg'
     },
     [CollegeEnum.SanFrancisco]: {
         collegeName: 'San Francisco',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Don Francisco',
+        imgSrc: 'sanfrancisco.jpg'
     },
     [CollegeEnum.Kentucky]: {
         collegeName: 'Kentucky',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'The Kentucky Wildcat',
+        imgSrc: 'kentucky.jpg'
     },
     [CollegeEnum.StPeters]: {
         collegeName: "St Peter's",
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Peacock',
+        imgSrc: 'unknown.png'
     },
     [CollegeEnum.Arizona]: {
         collegeName: 'Arizona',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Wilbur and Wilma',
+        imgSrc: 'arizona.jpg'
     },
     [CollegeEnum.SetonHall]: {
         collegeName: 'Seton Hall',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Pirate',
+        imgSrc: 'setonhall.jpg'
     },
     [CollegeEnum.TCU]: {
         collegeName: 'TCU',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'SuperFrog',
+        imgSrc: 'tcu.jpg'
     },
     [CollegeEnum.Houston]: {
         collegeName: 'Houston',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Shasta and Sasha',
+        imgSrc: 'houston.jpg'
     },
     [CollegeEnum.UAB]: {
         collegeName: 'UAB',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Blaze the Dragon',
+        imgSrc: 'uab.jpg'
     },
     [CollegeEnum.Illinois]: {
         collegeName: 'Illinois',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'The Kingfisher',
+        imgSrc: 'illinois.webp',
+        isUnofficial: true
     },
     [CollegeEnum.Chattanooga]: {
         collegeName: 'Chattanooga',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Scrappy Moc',
+        imgSrc: 'chattanooga.jpg'
     },
     [CollegeEnum.ColoradoSt]: {
         collegeName: 'Colorado St',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'CAM the Ram',
+        imgSrc: 'coloradost.jpg'
     },
     [CollegeEnum.Michigan]: {
         collegeName: 'Michigan',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: '[No Mascot]',
+        imgSrc: 'unknown.png'
     },
     [CollegeEnum.Tennessee]: {
         collegeName: 'Tennessee',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Smokey',
+        imgSrc: 'tennessee.jpg'
     },
     [CollegeEnum.Longwood]: {
         collegeName: 'Longwood',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Elwood',
+        imgSrc: 'longwood.jpg'
     },
     [CollegeEnum.OhioSt]: {
         collegeName: 'Ohio St',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Brutus Buckeye',
+        imgSrc: 'ohiost.jpg'
     },
     [CollegeEnum.LoyolaChicago]: {
         collegeName: 'Loyola Chicago',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'LU Wolf',
+        imgSrc: 'loyolachicago.jpg'
     },
     [CollegeEnum.Villanova]: {
         collegeName: 'Villanova',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Will D. Cat',
+        imgSrc: 'villanova.jpg'
     },
     [CollegeEnum.Delaware]: {
         collegeName: 'Delaware',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'YouUDee',
+        imgSrc: 'delaware.jpeg'
     },
     [CollegeEnum.Kansas]: {
         collegeName: 'Kansas',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Big Jay',
+        imgSrc: 'kansas.jpg'
     },
     [CollegeEnum.SanDiegoSt]: {
         collegeName: 'San Diego St',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: '[No Mascot]',
+        imgSrc: 'unknown.png'
     },
     [CollegeEnum.Creighton]: {
         collegeName: 'Creighton',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Billy Bluejay',
+        imgSrc: 'creighton.jpg'
     },
     [CollegeEnum.Iowa]: {
         collegeName: 'Iowa',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Herky the Hawk',
+        imgSrc: 'iowa.jpg'
     },
     [CollegeEnum.Richmond]: {
         collegeName: 'Richmond',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'WebstUR',
+        imgSrc: 'richmond.jpeg'
     },
     [CollegeEnum.Providence]: {
         collegeName: 'Providence',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Huxley and Friar Dom',
+        imgSrc: 'providence.jpg'
     },
     [CollegeEnum.SDakotaSt]: {
         collegeName: 'S Dakota St',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Jackrabbit',
+        imgSrc: 'sdakotast.jpg'
     },
     [CollegeEnum.LSU]: {
         collegeName: 'LSU',
         mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        imgSrc: 'lsu.jpg'
     },
     [CollegeEnum.IowaSt]: {
         collegeName: 'Iowa St',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Cy the Cardinal',
+        imgSrc: 'iowast.jpg'
     },
     [CollegeEnum.Wisconsin]: {
         collegeName: 'Wisconsin',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Bucky Badger',
+        imgSrc: 'wisconsin.jpg'
     },
     [CollegeEnum.Colgate]: {
         collegeName: 'Colgate',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Raider',
+        imgSrc: 'colgate.jpg'
     },
     [CollegeEnum.USC]: {
         collegeName: 'USC',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Tommy Trojan',
+        imgSrc: 'usc.jpeg'
     },
     [CollegeEnum.Miami]: {
         collegeName: 'Miami (FL)',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Sebastian the Ibis',
+        imgSrc: 'miami.webp'
     },
     [CollegeEnum.Auburn]: {
         collegeName: 'Auburn',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'gonzaga.jpg'
+        mascotName: 'Aubie the Tiger',
+        imgSrc: 'auburn.jpg'
     },
     [CollegeEnum.JacksonvilleSt]: {
         collegeName: 'Jacksonville St.',
-        mascotName: 'Fake Mascot',
-        imgSrc: 'georgiastate.jpg'
+        mascotName: 'Cocky',
+        imgSrc: 'jacksonvillest.jpg'
     }
 }
 

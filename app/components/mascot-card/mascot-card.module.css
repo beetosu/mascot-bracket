@@ -34,12 +34,18 @@
     border-radius: 4px;
     width: initial;
     max-width: 300px;
+    object-fit: cover;
 }
 
 .mascotButton .captionContainer .mascotName {
     font-size: 24px;
     font-weight: bold;
     margin: 0;
+}
+
+.mascotButton .captionContainer .subtitle {
+    margin: 0;
+    font-style: italic;
 }
 
 .mascotButton .captionContainer .collegeInfo {
