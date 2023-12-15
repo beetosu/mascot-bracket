@@ -1,6 +1,6 @@
 import Bracket from '@/app/components/bracket/bracket';
-import TournamentRound, { determineRound, getNextRound, getXStep, getYGap, getYStart, getYStep } from '@/app/common/tournament-round-enum';
-import CollegeEnum from '@/app/common/college-enum';
+import TournamentRound, { determineRound, getNextRound, getXStep, getYGap, getYStart, getYStep } from '@/app/common/enums/tournament-round-enum';
+import CollegeEnum from '@/app/common/enums/college-enum';
 import MascotStore from '@/app/common/mascot-store';
 
 type WinStateProps = { 

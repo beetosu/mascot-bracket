@@ -1,5 +1,5 @@
 import BracketInfo from "../bracket-info";
-import CollegeEnum from "../college-enum";
+import CollegeEnum from "../enums/college-enum";
 
 const mens2022: BracketInfo[] = [
     {

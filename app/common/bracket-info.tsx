@@ -1,4 +1,4 @@
-import CollegeEnum from "./college-enum"
+import CollegeEnum from "./enums/college-enum"
 
 type BracketInfo = {
     id: CollegeEnum

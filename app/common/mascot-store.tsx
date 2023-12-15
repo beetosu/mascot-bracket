@@ -1,4 +1,4 @@
-import CollegeEnum from "./college-enum"
+import CollegeEnum from "./enums/college-enum"
 
 export type MascotData = {
     collegeName: string,

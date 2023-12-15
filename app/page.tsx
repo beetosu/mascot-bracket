@@ -3,13 +3,13 @@
 import { useState } from 'react'
 import styles from './page.module.css'
 import TournamentState from './components/states/tournament-state/tournament-state';
-import GameStateEnum from './common/game-state-enum';
+import GameStateEnum from './common/enums/game-state-enum';
 import WinState from './components/states/win-state/win-state';
 import UnknownState from './components/states/unknown-state/unknown-state';
 import MenuState from './components/states/menu-state/menu-state';
 import mens2022 from './common/tournaments/mens-2022';
 import BracketInfo from './common/bracket-info';
-import CollegeEnum from './common/college-enum';
+import CollegeEnum from './common/enums/college-enum';
 
 export type MatchQueue = [BracketInfo, BracketInfo?][];
 export type ExtraData = {
@@ -41,7 +41,7 @@ function formatMatchHistory(matchHistory: CollegeEnum[], bracket: BracketInfo[])
 }
 
 export default function Home() {
-  const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Tournament);
+  const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Menu);
   const [matchHistory, updateMatchHistory] = useState<CollegeEnum[]>([]);
   const bracket = mens2022;
 

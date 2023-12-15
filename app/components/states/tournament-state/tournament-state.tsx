@@ -5,9 +5,9 @@ import styles from './tournament-state.module.css'
 import MascotStore, { MascotData } from '@/app/common/mascot-store';
 import MascotCard from '@/app/components/mascot-card/mascot-card';
 import { ExtraData, MatchQueue } from '@/app/page';
-import GameStateEnum from '@/app/common/game-state-enum';
+import GameStateEnum from '@/app/common/enums/game-state-enum';
 import BracketInfo from '@/app/common/bracket-info';
-import CollegeEnum from '@/app/common/college-enum';
+import CollegeEnum from '@/app/common/enums/college-enum';
 
 type TournamentStateProps = { 
   handleGameStateTransition: (upcomingGameState: GameStateEnum, extraData?: ExtraData) => void,
