@@ -8,13 +8,13 @@
     flex-direction: column;
 }
 
-.mascotButton:active {
-    background-color: #aaaaaaaa;
-    transform: scale(98%);
-}
-
 .mascotButton:hover {
     background-color: #bbbbbbaa;
+}
+
+.mascotButton:active {
+    background-color: #ddddddaa;
+    transform: scale(98%);
 }
 
 .mascotButton.left {
