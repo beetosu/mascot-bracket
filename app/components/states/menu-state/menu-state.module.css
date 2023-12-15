@@ -1,0 +1,27 @@
+.menuState {
+    align-items: center;
+    background-color: #ccccccaa;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    max-width: min(600px, 95vw);
+    padding: 4px;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.menuState p {
+    margin: 0 16px;
+}
+
+.menuState .buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.menuState .buttons button {
+    background-color: #999999aa;
+    border: 0;
+    border-radius: 4px;
+    font-size: 24px;
+}

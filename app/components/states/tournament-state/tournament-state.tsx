@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import styles from './tournament-state.module.css'
-import MascotStore, { MascotData } from '@/app/common/mascot-store';
 import MascotCard from '@/app/components/mascot-card/mascot-card';
 import { ExtraData, MatchQueue } from '@/app/page';
 import GameStateEnum from '@/app/common/enums/game-state-enum';
