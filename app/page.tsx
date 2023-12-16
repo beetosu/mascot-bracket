@@ -44,7 +44,7 @@ function formatMatchHistory(matchHistory: CollegeEnum[], bracket: BracketInfo[])
 export default function Home() {
   const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Menu);
   const [matchHistory, updateMatchHistory] = useState<CollegeEnum[]>([]);
-  const bracket = mens2022;
+  const [bracket, selectBracket] = useState<BracketInfo[]>([]);
 
   /**
    * Transition the game from one state to another.
@@ -63,6 +63,15 @@ export default function Home() {
 
         const updatedMatchHistory = formatMatchHistory(extraData.matchHistory, bracket);
         updateMatchHistory(updatedMatchHistory);
+        break;
+      case GameStateEnum.Tournament:
+        // If we don't have bracket info,
+        // we can't start the tournament!
+        if (!extraData?.bracket) {
+          updateGameState(GameStateEnum.Unknown);
+          return;
+        }
+        selectBracket(extraData.bracket)
         break;
       default:
         updateGameState(GameStateEnum.Unknown);
