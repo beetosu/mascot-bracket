@@ -1,0 +1,15 @@
+.tournamentButton {
+    background-color: #999999aa;
+    border: 0;
+    border-radius: 4px;
+    font-size: 24px;
+    width: 150px;
+}
+
+.tournamentButton:hover {
+    background-color: #777777aa;
+}
+
+.tournamentButton:active {
+    background-color: #aaaaaaaa;
+}

@@ -13,7 +13,8 @@ import CollegeEnum from './common/enums/college-enum';
 
 export type MatchQueue = [BracketInfo, BracketInfo?][];
 export type ExtraData = {
-  matchHistory?: CollegeEnum[]
+  matchHistory?: CollegeEnum[],
+  bracket?: BracketInfo[]
 }
 
 /**
@@ -74,7 +75,11 @@ export default function Home() {
   function generateGameComponent(): JSX.Element {
     switch(gameState) {
       case GameStateEnum.Menu:
-        return (<MenuState />);
+        return (
+          <MenuState 
+            handleGameStateTransition={handleGameStateTransition}
+          />
+        );
       case GameStateEnum.Tournament:
         return (
           <TournamentState 

@@ -18,18 +18,3 @@
     display: flex;
     gap: 8px;
 }
-
-.menuState .buttons button {
-    background-color: #999999aa;
-    border: 0;
-    border-radius: 4px;
-    font-size: 24px;
-}
-
-.menuState .buttons button:hover {
-    background-color: #777777aa;
-}
-
-.menuState .buttons button:active {
-    background-color: #aaaaaaaa;
-}
