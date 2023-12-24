@@ -1,5 +1,6 @@
 import TournamentRound, { determineRound, getNextRound, getXStep, getYGap, getYStart, getYStep } from '@/app/common/enums/tournament-round-enum';
 import TextObject from '../types/text-object';
+import TextAlignEnum from '../enums/text-align-enum';
 
 /**
  * Build a list of text objects to display on the bracket canvas.
@@ -14,7 +15,7 @@ function generateCollegeTextObjects(matchHistory: string[]): TextObject[] {
             text: college,
             x: determineX(idx),
             y: determineY(idx),
-            isRight: isRight(idx)
+            textAlign: determineTextAlign(idx)
         });
     });
     return collegeTextObjects;
@@ -106,6 +107,20 @@ function determineFirstFourY(idx: number): number {
     y += yStep;
     }
     return y;
+}
+
+/**
+ * Determine whether the college should be on the left or right hand side of the bracket.
+ * @param idx The index of the college in the match history.
+ * @returns A boolean representing if the college should be on the right of the bracket.
+ */
+function determineTextAlign(idx: number): TextAlignEnum {
+    const currentRound = determineRound(idx);
+    const nextRound = getNextRound(currentRound);
+
+    if (!nextRound) return TextAlignEnum.Center
+
+    return isRight(idx) ? TextAlignEnum.Right : TextAlignEnum.Left;
 }
 
 /**

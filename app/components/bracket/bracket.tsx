@@ -9,7 +9,7 @@ import TextObject from '@/app/common/types/text-object';
  */
 function drawCollegeNames(ctx: CanvasRenderingContext2D, collegeTextObjects: TextObject[]) {
 	for (const c of collegeTextObjects) {
-		c.isRight ? ctx.textAlign = 'right' : ctx.textAlign = 'left';
+		ctx.textAlign = c.textAlign;
 		ctx.fillText(c.text, c.x, c.y);
 	}
 }
