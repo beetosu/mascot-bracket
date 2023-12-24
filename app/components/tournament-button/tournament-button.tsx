@@ -1,17 +1,17 @@
-import BracketInfo from "@/app/common/types/bracket-info"
 import styles from "./tournament-button.module.css";
+import Tournament from "@/app/common/types/tournament";
 
-type SelectTournamentMethod = (bracket: BracketInfo[]) => void;
+type SelectTournamentMethod = (tournament: Tournament) => void;
 
 type TournamentButtonProps = {
     selectTournament: SelectTournamentMethod,
     name: string,
-    bracket: BracketInfo[]
+    tournament: Tournament
 }
 
-export default function TournamentButton({ selectTournament, name, bracket }: TournamentButtonProps) {
+export default function TournamentButton({ selectTournament, name, tournament }: TournamentButtonProps) {
 
-    function handleTournamentSelection() { selectTournament(bracket) };
+    function handleTournamentSelection() { selectTournament(tournament) };
 
     return (
         <button className={styles.tournamentButton} onClick={handleTournamentSelection}>{name}</button>

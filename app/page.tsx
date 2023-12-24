@@ -10,11 +10,12 @@ import MenuState from './components/states/menu-state/menu-state';
 import mens2022 from './common/tournaments/mens-2022';
 import BracketInfo from './common/types/bracket-info';
 import CollegeEnum from './common/enums/college-enum';
+import Tournament from './common/types/tournament';
 
 export type MatchQueue = [BracketInfo, BracketInfo?][];
 export type ExtraData = {
   matchHistory?: CollegeEnum[],
-  bracket?: BracketInfo[]
+  tournament?: Tournament
 }
 
 /**
@@ -44,7 +45,7 @@ function formatMatchHistory(matchHistory: CollegeEnum[], bracket: BracketInfo[])
 export default function Home() {
   const [gameState, updateGameState] = useState<GameStateEnum>(GameStateEnum.Menu);
   const [matchHistory, updateMatchHistory] = useState<CollegeEnum[]>([]);
-  const [bracket, selectBracket] = useState<BracketInfo[]>([]);
+  const [tournament, selectTournament] = useState<Tournament>(mens2022);
 
   /**
    * Transition the game from one state to another.
@@ -61,17 +62,17 @@ export default function Home() {
           return;
         }
 
-        const updatedMatchHistory = formatMatchHistory(extraData.matchHistory, bracket);
+        const updatedMatchHistory = formatMatchHistory(extraData.matchHistory, tournament.bracket);
         updateMatchHistory(updatedMatchHistory);
         break;
       case GameStateEnum.Tournament:
         // If we don't have bracket info,
         // we can't start the tournament!
-        if (!extraData?.bracket) {
+        if (!extraData?.tournament) {
           updateGameState(GameStateEnum.Unknown);
           return;
         }
-        selectBracket(extraData.bracket)
+        selectTournament(extraData.tournament)
         break;
       default:
         updateGameState(GameStateEnum.Unknown);
@@ -93,7 +94,7 @@ export default function Home() {
         return (
           <TournamentState 
             handleGameStateTransition={handleGameStateTransition}
-            bracket={bracket}
+            tournament={tournament}
           />
         );
       case GameStateEnum.Win:

@@ -7,10 +7,11 @@ import { ExtraData, MatchQueue } from '@/app/page';
 import GameStateEnum from '@/app/common/enums/game-state-enum';
 import BracketInfo from '@/app/common/types/bracket-info';
 import CollegeEnum from '@/app/common/enums/college-enum';
+import Tournament from '@/app/common/types/tournament';
 
 type TournamentStateProps = { 
   handleGameStateTransition: (upcomingGameState: GameStateEnum, extraData?: ExtraData) => void,
-  bracket: BracketInfo[]
+  tournament: Tournament
 }
 
 /**
@@ -32,8 +33,8 @@ function generateMatchQueue(bracket: BracketInfo[]): MatchQueue {
   return queue;
 }
 
-export default function TournamentState({ handleGameStateTransition, bracket }: TournamentStateProps ) {
-  const initialMatchQueue = generateMatchQueue(bracket);
+export default function TournamentState({ handleGameStateTransition, tournament }: TournamentStateProps ) {
+  const initialMatchQueue = generateMatchQueue(tournament.bracket);
   const [matchQueue, updateMatchQueue] = useState<MatchQueue>(initialMatchQueue);
   const [leftMatch, updateLeftMatch] = useState<BracketInfo>(initialMatchQueue[0][0]);
   const [rightMatch, updateRightMatch] = useState<BracketInfo | undefined>(initialMatchQueue[0][1]);

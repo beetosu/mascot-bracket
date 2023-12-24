@@ -3,17 +3,17 @@
 import { ExtraData } from '@/app/page';
 import styles from './menu-state.module.css'
 import GameStateEnum from '@/app/common/enums/game-state-enum';
-import BracketInfo from '@/app/common/types/bracket-info';
 import mens2022 from '@/app/common/tournaments/mens-2022';
 import TournamentButton from '../../tournament-button/tournament-button';
+import Tournament from '@/app/common/types/tournament';
 
 type MenuStateProps = { 
   handleGameStateTransition: (upcomingGameState: GameStateEnum, extraData?: ExtraData) => void,
 }
 
 export default function MenuState({ handleGameStateTransition }: MenuStateProps) {
-  function selectTournament(bracket: BracketInfo[]) {
-    handleGameStateTransition(GameStateEnum.Tournament, { bracket });
+  function selectTournament(tournament: Tournament) {
+    handleGameStateTransition(GameStateEnum.Tournament, { tournament });
   }
 
   const MENS_NAME = "Mens";
@@ -29,13 +29,13 @@ export default function MenuState({ handleGameStateTransition }: MenuStateProps)
           key={MENS_NAME}
           selectTournament={selectTournament}
           name={MENS_NAME}
-          bracket={mens2022}
+          tournament={mens2022}
         />
         <TournamentButton 
           key={WOMENS_NAME}
           selectTournament={selectTournament}
           name={WOMENS_NAME}
-          bracket={mens2022}
+          tournament={mens2022}
         />
       </div>
     </div>
