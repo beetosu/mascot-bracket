@@ -2,7 +2,7 @@ import Bracket from '@/app/components/bracket/bracket';
 import CollegeEnum from '@/app/common/enums/college-enum';
 import MascotStore from '@/app/common/mascot-store';
 import Tournament from '@/app/common/types/tournament';
-import generateCollegeTextObjects from '@/app/common/builders/college-text-object-builder';
+import generateCollegeTextObjects from '@/app/common/builders/college-text-builder';
 
 type WinStateProps = { 
   matchHistory: CollegeEnum[],
