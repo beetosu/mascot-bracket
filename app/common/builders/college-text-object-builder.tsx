@@ -1,23 +1,23 @@
 import TournamentRound, { determineRound, getNextRound, getXStep, getYGap, getYStart, getYStep } from '@/app/common/enums/tournament-round-enum';
-import CollegeCoordinates from '../types/college-coordinates';
+import TextObject from '../types/text-object';
 
 /**
  * Build a list of text objects to display on the bracket canvas.
  * @param matchHistory A list of college names based on their placements in the tournament
  * @returns A list of objects holding the college name, and their coordinates.
  */
-function generateCoordinates(matchHistory: string[]): CollegeCoordinates[] {
-    const collegeCoords: CollegeCoordinates[] = [];
+function generateCollegeTextObjects(matchHistory: string[]): TextObject[] {
+    const collegeTextObjects: TextObject[] = [];
 
     matchHistory.forEach((college, idx) => {
-        collegeCoords.push({
-            college: college,
+        collegeTextObjects.push({
+            text: college,
             x: determineX(idx),
             y: determineY(idx),
             isRight: isRight(idx)
         });
     });
-    return collegeCoords;
+    return collegeTextObjects;
 }
 
 /**
@@ -124,4 +124,4 @@ function isRight(idx: number): boolean {
     return idx >= nextRound - ((nextRound - currentRound) / 2);
 }
 
-export default generateCoordinates;
+export default generateCollegeTextObjects;

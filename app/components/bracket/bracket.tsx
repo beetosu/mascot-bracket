@@ -1,16 +1,16 @@
 import { useEffect, useRef } from 'react'
 import styles from './bracket.module.css'
-import CollegeCoordinates from '@/app/common/types/college-coordinates';
+import TextObject from '@/app/common/types/text-object';
 
 /**
  * Draw all of the provided colleges onto the appropriate portions of the canvas.
  * @param ctx The context of the canvas we are drawing on.
- * @param collegeCoordinates A list of objects holding college names and 2d positions.
+ * @param collegeTextObjects A list of objects holding college names and 2d positions.
  */
-function drawCollegeNames(ctx: CanvasRenderingContext2D, collegeCoordinates: CollegeCoordinates[]) {
-	for (const c of collegeCoordinates) {
+function drawCollegeNames(ctx: CanvasRenderingContext2D, collegeTextObjects: TextObject[]) {
+	for (const c of collegeTextObjects) {
 		c.isRight ? ctx.textAlign = 'right' : ctx.textAlign = 'left';
-		ctx.fillText(c.college, c.x, c.y);
+		ctx.fillText(c.text, c.x, c.y);
 	}
 }
 
@@ -28,7 +28,7 @@ function exportCanvasToImage(canvas: HTMLCanvasElement, image: HTMLImageElement 
 	image.setAttribute('alt', imageAlt);
 }
 
-export default function Bracket({collegeCoordinates}: { collegeCoordinates: CollegeCoordinates[] }) {
+export default function Bracket({collegeTextObjects}: { collegeTextObjects: TextObject[] }) {
 	const imageRef = useRef<HTMLImageElement | null>(null);
 
 	useEffect(() => {
@@ -46,7 +46,7 @@ export default function Bracket({collegeCoordinates}: { collegeCoordinates: Coll
 		const base = new Image();
 		base.onload = () => {
 			ctx.drawImage(base, 0, 0);
-			drawCollegeNames(ctx, collegeCoordinates);
+			drawCollegeNames(ctx, collegeTextObjects);
 			exportCanvasToImage(canvas, imageRef.current)
 		}
 		base.src = 'images/bracket.png';
