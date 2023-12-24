@@ -101,6 +101,7 @@ export default function Home() {
         return (
           <WinState 
             matchHistory={matchHistory}
+            tournament={tournament}
           />
         );
       default:

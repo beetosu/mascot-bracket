@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import styles from './bracket.module.css'
-import { CollegeCoordinates } from '../states/win-state/win-state';
+import CollegeCoordinates from '@/app/common/types/college-coordinates';
 
 /**
  * Draw all of the provided colleges onto the appropriate portions of the canvas.
