@@ -8,7 +8,7 @@ import WinState from './components/states/win-state/win-state';
 import UnknownState from './components/states/unknown-state/unknown-state';
 import MenuState from './components/states/menu-state/menu-state';
 import mens2022 from './common/tournaments/mens-2022';
-import BracketInfo from './common/bracket-info';
+import BracketInfo from './common/types/bracket-info';
 import CollegeEnum from './common/enums/college-enum';
 
 export type MatchQueue = [BracketInfo, BracketInfo?][];

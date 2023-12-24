@@ -1,7 +1,10 @@
-import BracketInfo from "../bracket-info";
+import BracketInfo from "../types/bracket-info";
 import CollegeEnum from "../enums/college-enum";
+import TournamentRound from "../enums/tournament-round-enum";
+import RoundDates from "../types/round-dates";
+import Tournament from "../types/tournament";
 
-const mens2022: BracketInfo[] = [
+const mens2022Bracket: BracketInfo[] = [
     {
         id: CollegeEnum.TexasSouthern,
         rank: 16
@@ -295,5 +298,21 @@ const mens2022: BracketInfo[] = [
         rank: 15
     }
 ];
+
+const mens2022Rounds: RoundDates = {
+    [TournamentRound.FirstFour]: "March 15-16",
+    [TournamentRound.First]: "March 17-19",
+    [TournamentRound.Second]: "March 18-20",
+    [TournamentRound.Sixteen]: "March 24-26",
+    [TournamentRound.Eight]: "March 25-27",
+    [TournamentRound.FinalFour]: "April 2",
+    [TournamentRound.Championship]: "April 4"
+}
+
+const mens2022: Tournament = {
+    name: "Men's 2022",
+    bracket: mens2022Bracket,
+    roundDates: mens2022Rounds
+}
 
 export default mens2022;

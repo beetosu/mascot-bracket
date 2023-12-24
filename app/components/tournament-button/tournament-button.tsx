@@ -1,4 +1,4 @@
-import BracketInfo from "@/app/common/bracket-info"
+import BracketInfo from "@/app/common/types/bracket-info"
 import styles from "./tournament-button.module.css";
 
 type SelectTournamentMethod = (bracket: BracketInfo[]) => void;

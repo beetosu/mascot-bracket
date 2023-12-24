@@ -5,7 +5,7 @@ import styles from './tournament-state.module.css'
 import MascotCard from '@/app/components/mascot-card/mascot-card';
 import { ExtraData, MatchQueue } from '@/app/page';
 import GameStateEnum from '@/app/common/enums/game-state-enum';
-import BracketInfo from '@/app/common/bracket-info';
+import BracketInfo from '@/app/common/types/bracket-info';
 import CollegeEnum from '@/app/common/enums/college-enum';
 
 type TournamentStateProps = { 

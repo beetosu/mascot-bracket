@@ -1,6 +1,6 @@
 import CollegeEnum from '@/app/common/enums/college-enum';
 import styles from './mascot-card.module.css'
-import BracketInfo from '@/app/common/bracket-info'
+import BracketInfo from '@/app/common/types/bracket-info'
 import MascotStore from '@/app/common/mascot-store';
 
 type MascotCardProps = {

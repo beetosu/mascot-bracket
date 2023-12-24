@@ -3,7 +3,7 @@
 import { ExtraData } from '@/app/page';
 import styles from './menu-state.module.css'
 import GameStateEnum from '@/app/common/enums/game-state-enum';
-import BracketInfo from '@/app/common/bracket-info';
+import BracketInfo from '@/app/common/types/bracket-info';
 import mens2022 from '@/app/common/tournaments/mens-2022';
 import TournamentButton from '../../tournament-button/tournament-button';
 
