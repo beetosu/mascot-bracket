@@ -21,13 +21,23 @@ function buildRoundDate(roundEnum: TournamentRound, dates: string): TextObject {
     return {
         text: dates,
         x: generateX(roundEnum),
-        y: 20,
+        y: generateY(roundEnum),
         textAlign: TextAlignEnum.Center
     }
 }
 
 function generateX(roundEnum: TournamentRound) {
-    return roundEnum;
+    switch (roundEnum) {
+        case TournamentRound.FirstFour:
+            return 1918 / 2
+        default:
+            return 20;
+    }
+}
+
+function generateY(roundEnum: TournamentRound) {
+    const isFirstFour = roundEnum === TournamentRound.FirstFour;
+    return isFirstFour ? 1250 : 115
 }
 
 export default generateRoundDates;

@@ -1,7 +1,10 @@
 import { MutableRefObject } from "react";
 import TextObject from "../types/text-object";
 
-function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, collegeTextObjects: TextObject[]) {
+const COLLEGE_FONT = "22px Arial";
+const ROUND_FONT = "18px Arial";
+
+function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, colleges: TextObject[], rounds: TextObject[]) {
     // Create a canvas which we can draw the bracket onto.
     const canvas = document.createElement('canvas');
 
@@ -10,27 +13,25 @@ function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, colleg
 
     canvas.width = 1918;
     canvas.height = 1500;
-    ctx.font = "22px Arial";
 
     // Set bracket as background image
     const base = new Image();
     base.onload = () => {
         ctx.drawImage(base, 0, 0);
-        drawCollegeNames(ctx, collegeTextObjects);
+        drawTextObjects(ctx, colleges, COLLEGE_FONT);
+        drawTextObjects(ctx, rounds, COLLEGE_FONT);
         exportCanvasToImage(canvas, imageRef.current)
     }
     base.src = 'images/bracket.png';
 }
 
-/**
- * Draw all of the provided colleges onto the appropriate portions of the canvas.
- * @param ctx The context of the canvas we are drawing on.
- * @param collegeTextObjects A list of objects holding college names and 2d positions.
- */
-function drawCollegeNames(ctx: CanvasRenderingContext2D, collegeTextObjects: TextObject[]) {
-	for (const c of collegeTextObjects) {
-		ctx.textAlign = c.textAlign;
-		ctx.fillText(c.text, c.x, c.y);
+
+function drawTextObjects(ctx: CanvasRenderingContext2D, textObjects: TextObject[], font: string) {
+    ctx.font = font;
+
+	for (const t of textObjects) {
+		ctx.textAlign = t.textAlign;
+		ctx.fillText(t.text, t.x, t.y);
 	}
 }
 
