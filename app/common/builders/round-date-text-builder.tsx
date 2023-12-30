@@ -15,7 +15,7 @@ function generateRoundDates(roundDates: RoundDates): TextObject[] {
         TournamentRound.Championship
     ]
 
-    let roundTextObjects = validRounds.map(r => buildRoundDate(r, roundDates[r]));
+    const roundTextObjects = validRounds.map(r => buildRoundDate(r, roundDates[r]));
 
     const mirrorRounds: RoundsWithoutWinner[] = [
         TournamentRound.First,
