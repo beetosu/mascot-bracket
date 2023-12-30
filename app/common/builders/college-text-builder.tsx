@@ -80,7 +80,7 @@ function determineY(idx: number): number {
  * @param idx The index of the college in the match history. 
  * @returns a number representing the x value.
  */
-function determineFirstFourX(idx: number): number {
+export function determineFirstFourX(idx: number): number {
     switch (Math.floor(idx / 2)) {
     case 0:
         return 280;
@@ -98,7 +98,7 @@ function determineFirstFourX(idx: number): number {
  * @param idx The index of the college in the match history. 
  * @returns a number representing the y value.
  */
-function determineFirstFourY(idx: number): number {
+export function determineFirstFourY(idx: number): number {
     let y = 659;
     const yStep = 15;
 
