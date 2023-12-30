@@ -1,3 +1,15 @@
+# March Mascots
+
+## Copyright Notice
+
+All mascot images are sourced from the official website or social media associated with the mascot and/or the univerity they represent, unless otherwise stated. All rights reserved. Please reach out to me at [contact@cwalsh.dev](mailto:contact@cwalsh.dev) with any concerns.
+
+The icon for this page is sourced from [Twemoji](https://twemoji.twitter.com/).
+
+Below is a portion of the README.md generated when this page was bootstrapped, kept to instruct users on running this page locally. Unlike the note below, however, current deployment builds the page staticlly using `npm run build`.
+
+----
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
