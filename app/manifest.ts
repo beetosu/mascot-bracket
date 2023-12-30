@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next'
  
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Mascot Bracket',
-    short_name: 'Mascot Bracket',
+    name: 'March Mascots',
+    short_name: 'March Mascots',
     description: 'Create a printable bracket for the 2024 NCAA March Madness tournament based on the college\'s mascots!',
     start_url: '/',
     display: 'standalone',
