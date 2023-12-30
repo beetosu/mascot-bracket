@@ -67,7 +67,26 @@ enum CollegeEnum {
     USC,
     Miami,
     Auburn,
-    JacksonvilleSt
+    JacksonvilleSt,
+    Merrimack,
+    Southern,
+    OralRoberts,
+    Dayton,
+    IndianaSt,
+    Clemson,
+    FAU,
+    MoreheadSt,
+    Marist,
+    Princeton,
+    UNCW,
+    FortWayne,
+    WeberSt,
+    GrandCanyon,
+    UCIrvine,
+    Samford,
+    Lipscomb,
+    Liberty,
+    McNesseSt
 }
 
 export default CollegeEnum;
