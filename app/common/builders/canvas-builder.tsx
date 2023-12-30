@@ -1,5 +1,6 @@
 import { MutableRefObject } from "react";
 import TextObject from "../types/text-object";
+import BracketTextObjects from "../types/bracket-text-objects";
 
 const COLLEGE_FONT = "22px Arial";
 const ROUND_FONT = "18px Arial";
@@ -7,7 +8,7 @@ const ROUND_FONT = "18px Arial";
 export const CANVAS_HEIGHT = 1500;
 export const CANVAS_WIDTH = 1918;
 
-function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, colleges: TextObject[], rounds: TextObject[]) {
+function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, bracketTextObjects: BracketTextObjects) {
     // Create a canvas which we can draw the bracket onto.
     const canvas = document.createElement('canvas');
 
@@ -21,8 +22,8 @@ function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, colleg
     const base = new Image();
     base.onload = () => {
         ctx.drawImage(base, 0, 0);
-        drawTextObjects(ctx, colleges, COLLEGE_FONT);
-        drawTextObjects(ctx, rounds, ROUND_FONT);
+        drawTextObjects(ctx, bracketTextObjects.collegeNames, COLLEGE_FONT);
+        drawTextObjects(ctx, bracketTextObjects.roundDates, ROUND_FONT);
         exportCanvasToImage(canvas, imageRef.current)
     }
     base.src = 'images/bracket.png';
@@ -33,9 +34,15 @@ function drawTextObjects(ctx: CanvasRenderingContext2D, textObjects: TextObject[
     ctx.font = font;
 
 	for (const t of textObjects) {
-		ctx.textAlign = t.textAlign;
-		ctx.fillText(t.text, t.x, t.y);
+		drawTextObject(ctx, t);
 	}
+}
+
+function drawTextObject(ctx: CanvasRenderingContext2D, textObject: TextObject, font?: string) {
+    if (font) ctx.font = font;
+
+    ctx.textAlign = textObject.textAlign;
+	ctx.fillText(textObject.text, textObject.x, textObject.y);
 }
 
 /**
