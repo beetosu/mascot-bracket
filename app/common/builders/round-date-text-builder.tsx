@@ -41,15 +41,15 @@ function buildRoundDate(roundEnum: TournamentRound, dates: string, isRight?: boo
 function generateX(roundEnum: TournamentRound) {
     switch (roundEnum) {
         case TournamentRound.First:
-            return 125;
+            return 62;
         case TournamentRound.Second:
-            return 295;
+            return 150;
         case TournamentRound.Sixteen:
-            return 485;
+            return 245;
         case TournamentRound.Eight:
-            return 665;
+            return 332;
         case TournamentRound.FinalFour:
-            return 840;
+            return 420;
         default:
             return CANVAS_WIDTH / 2;
     }
@@ -58,11 +58,11 @@ function generateX(roundEnum: TournamentRound) {
 function generateY(roundEnum: TournamentRound) {
     switch (roundEnum) {
         case TournamentRound.FirstFour:
-            return 1225;
+            return 591;
         case TournamentRound.Championship:
-            return 605;
+            return 300;
         default:
-            return 110;
+            return 55;
     }
 }
 
