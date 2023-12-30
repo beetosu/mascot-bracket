@@ -9,6 +9,7 @@ function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, bracke
     const COLLEGE_FONT = fontString(11);
     const ROUND_FONT = fontString(8);
     const NAME_FONT = fontString(25, 'bold');
+    const FIRST_FOUR_FONT = fontString(11, 'bold');
 
     // Create a canvas which we can draw the bracket onto.
     const canvas = document.createElement('canvas');
@@ -26,6 +27,7 @@ function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, bracke
         drawTextObject(ctx, bracketTextObjects.tournamentName, NAME_FONT)
         drawTextObjects(ctx, bracketTextObjects.collegeNames, COLLEGE_FONT);
         drawTextObjects(ctx, bracketTextObjects.roundDates, ROUND_FONT);
+        drawTextObjects(ctx, bracketTextObjects.firstFourRank, FIRST_FOUR_FONT);
         exportCanvasToImage(canvas, imageRef.current)
     }
     base.src = 'images/bracket.png';
