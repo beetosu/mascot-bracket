@@ -6,6 +6,7 @@ import GameStateEnum from '@/app/common/enums/game-state-enum';
 import mens2022 from '@/app/common/tournaments/mens-2022';
 import TournamentButton from '../../tournament-button/tournament-button';
 import Tournament from '@/app/common/types/tournament';
+import mens2024 from '@/app/common/tournaments/mens-2024';
 
 type MenuStateProps = { 
   handleGameStateTransition: (upcomingGameState: GameStateEnum, extraData?: ExtraData) => void,
@@ -29,7 +30,7 @@ export default function MenuState({ handleGameStateTransition }: MenuStateProps)
           key={MENS_NAME}
           selectTournament={selectTournament}
           name={MENS_NAME}
-          tournament={mens2022}
+          tournament={mens2024}
         />
         <TournamentButton 
           key={WOMENS_NAME}
