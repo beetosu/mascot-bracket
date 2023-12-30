@@ -22,7 +22,7 @@ export default function MenuState({ handleGameStateTransition }: MenuStateProps)
   return (
     <div className={styles.menuState}>
       <h1>🏀 March Mascots! 🏀</h1>
-      <p>Create a printable bracket for the 2024 NCAA March Madness based on the college&apos;s mascots!</p>
+      <p>Create a printable bracket for the 2024 NCAA March Madness tournament based on the college&apos;s mascots!</p>
       <h2>Select Tournament:</h2>
       <div className={styles.buttons}>
         <TournamentButton 
