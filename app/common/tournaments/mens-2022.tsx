@@ -310,7 +310,7 @@ const mens2022Rounds: RoundDates = {
 }
 
 const mens2022: Tournament = {
-    name: "Men's 2022",
+    name: "Mens 2022 🏀",
     bracket: mens2022Bracket,
     roundDates: mens2022Rounds
 }
