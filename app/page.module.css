@@ -1,8 +1,26 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin: auto;
+}
+
+.footer {
+  align-self: center;
+  padding-bottom: 8px;
+  color: #eee;
+}
+
+.footer a {
+  color: #eee;
 }
 
 @media (prefers-reduced-motion) {

@@ -112,8 +112,13 @@ export default function Home() {
   const game = generateGameComponent();
 
   return (
-    <main className={styles.main}>
-      {game}
-    </main>
+    <div className={styles.container}>
+      <main className={styles.main}>
+        {game}
+      </main>
+      <footer className={styles.footer}>
+        by <a href="https://cwalsh.dev">Colin Walsh</a> | <a href="mailto:contact@cwalsh.dev">contact@cwalsh.dev</a>
+      </footer>
+    </div>
   )
 }
