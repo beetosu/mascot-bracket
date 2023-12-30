@@ -174,7 +174,7 @@ const mens2024Bracket: BracketInfo[] = [
     {
         id: CollegeEnum.Unknown,
         rank: 16,
-        firstFour: 3
+        firstFour: 2
     },
     {
         id: CollegeEnum.Unknown,

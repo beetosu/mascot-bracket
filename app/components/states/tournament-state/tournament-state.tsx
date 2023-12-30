@@ -77,13 +77,13 @@ export default function TournamentState({ handleGameStateTransition, tournament 
   return (
     <div className={styles.gameState}>
       <MascotCard 
-        key={leftMatch.id}
+        key={`${leftMatch.id}-${leftMatch.rank}-left`}
         bracketInfo={leftMatch}
         handleQueueUpdate={handleQueueUpdate}
         isLeft={true}
       />
       <MascotCard 
-        key={rightMatch?.id ?? -1}
+        key={`${rightMatch?.id ?? -1}-${rightMatch?.rank ?? -1}-right`}
         bracketInfo={rightMatch}
         handleQueueUpdate={handleQueueUpdate}
         isLeft={false}
