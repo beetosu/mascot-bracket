@@ -34,7 +34,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.WrightSt]: {
-        collegeName: 'Wright St',
+        collegeName: 'Wright St.',
         mascotName: 'Rowdy Raider',
         imgSrc: 'wrightst.jpg'
     },
@@ -59,12 +59,12 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'gonzaga.jpg'
     },
     [CollegeEnum.GeorgiaSt]: {
-        collegeName: 'Georgia St',
+        collegeName: 'Georgia St.',
         mascotName: 'Pounce',
         imgSrc: 'georgiastate.jpg'
     },
     [CollegeEnum.BoiseSt]: {
-        collegeName: 'Boise St',
+        collegeName: 'Boise St.',
         mascotName: 'Buster Bronco',
         imgSrc: 'boisest.jpg'
     },
@@ -79,7 +79,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'uconn.jpg'
     },
     [CollegeEnum.NewMexicoSt]: {
-        collegeName: 'New Mexico St',
+        collegeName: 'New Mexico St.',
         mascotName: 'Pistol Pete',
         imgSrc: 'newmexicostate.jpg'
     },
@@ -104,12 +104,12 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'texastech.jpg'
     },
     [CollegeEnum.MontanaSt]: {
-        collegeName: 'Montana St',
+        collegeName: 'Montana St.',
         mascotName: 'Spirit the Bobcat',
         imgSrc: 'montanast.jpg'
     },
     [CollegeEnum.MichiganSt]: {
-        collegeName: 'Michigan St',
+        collegeName: 'Michigan St.',
         mascotName: 'Sparty',
         imgSrc: 'michiganst.jpg'
     },
@@ -134,7 +134,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'baylor.jpg'
     },
     [CollegeEnum.NorfolkSt]: {
-        collegeName: 'Norfolk St',
+        collegeName: 'Norfolk St.',
         mascotName: 'Spiro the Spartan',
         imgSrc: 'norfolkst.jpg'
     },
@@ -184,7 +184,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'yale.webp'
     },
     [CollegeEnum.MurraySt]: {
-        collegeName: 'Murray St',
+        collegeName: 'Murray St.',
         mascotName: 'Dunker',
         imgSrc: 'murrayst.jpg'
     },
@@ -240,7 +240,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'chattanooga.jpg'
     },
     [CollegeEnum.ColoradoSt]: {
-        collegeName: 'Colorado St',
+        collegeName: 'Colorado St.',
         mascotName: 'CAM the Ram',
         imgSrc: 'coloradost.jpg'
     },
@@ -260,7 +260,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'longwood.jpg'
     },
     [CollegeEnum.OhioSt]: {
-        collegeName: 'Ohio St',
+        collegeName: 'Ohio St.',
         mascotName: 'Brutus Buckeye',
         imgSrc: 'ohiost.jpg'
     },
@@ -285,7 +285,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'kansas.jpg'
     },
     [CollegeEnum.SanDiegoSt]: {
-        collegeName: 'San Diego St',
+        collegeName: 'San Diego St.',
         mascotName: '[No Mascot]',
         imgSrc: 'unknown.png'
     },
@@ -310,7 +310,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'providence.jpg'
     },
     [CollegeEnum.SDakotaSt]: {
-        collegeName: 'S Dakota St',
+        collegeName: 'S Dakota St.',
         mascotName: 'Jackrabbit',
         imgSrc: 'sdakotast.jpg'
     },
@@ -320,7 +320,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'lsu.jpg'
     },
     [CollegeEnum.IowaSt]: {
-        collegeName: 'Iowa St',
+        collegeName: 'Iowa St.',
         mascotName: 'Cy the Cardinal',
         imgSrc: 'iowast.jpg'
     },
@@ -355,97 +355,97 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         imgSrc: 'jacksonvillest.jpg'
     },
     [CollegeEnum.Merrimack]: {
-        collegeName: 'Unknown',
+        collegeName: 'Merrimack',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.Southern]: {
-        collegeName: 'Unknown',
+        collegeName: 'Southern',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.OralRoberts]: {
-        collegeName: 'Unknown',
+        collegeName: 'Oral Roberts',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.Dayton]: {
-        collegeName: 'Unknown',
+        collegeName: 'Dayton',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.IndianaSt]: {
-        collegeName: 'Unknown',
+        collegeName: 'Indiana St.',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.Clemson]: {
-        collegeName: 'Unknown',
+        collegeName: 'Clemson',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.FAU]: {
-        collegeName: 'Unknown',
+        collegeName: 'FAU',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.MoreheadSt]: {
-        collegeName: 'Unknown',
+        collegeName: 'Morehead St.',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.Marist]: {
-        collegeName: 'Unknown',
+        collegeName: 'Marist',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.Princeton]: {
-        collegeName: 'Unknown',
+        collegeName: 'Princeton',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.UNCW]: {
-        collegeName: 'Unknown',
+        collegeName: 'UNCW',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.FortWayne]: {
-        collegeName: 'Unknown',
+        collegeName: 'Fort Wayne',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.WeberSt]: {
-        collegeName: 'Unknown',
+        collegeName: 'Weber St.',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.GrandCanyon]: {
-        collegeName: 'Unknown',
+        collegeName: 'Grand Canyon',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.UCIrvine]: {
-        collegeName: 'Unknown',
+        collegeName: 'UC Irvine',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.Samford]: {
-        collegeName: 'Unknown',
+        collegeName: 'Samford',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.Lipscomb]: {
-        collegeName: 'Unknown',
+        collegeName: 'Lipscomb',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.Liberty]: {
-        collegeName: 'Unknown',
+        collegeName: 'Liberty',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.McNesseSt]: {
-        collegeName: 'Unknown',
+        collegeName: 'McNesse St.',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
