@@ -83,13 +83,13 @@ function determineY(idx: number): number {
 function determineFirstFourX(idx: number): number {
     switch (Math.floor(idx / 2)) {
     case 0:
-        return 560;
+        return 280;
     case 1:
-        return 790;
+        return 395;
     case 2:
-        return 1150; 
+        return 575; 
     default:
-        return 1380;
+        return 690;
     }
 }
 
@@ -99,8 +99,8 @@ function determineFirstFourX(idx: number): number {
  * @returns a number representing the y value.
  */
 function determineFirstFourY(idx: number): number {
-    let y = 1320;
-    const yStep = 30;
+    let y = 659;
+    const yStep = 15;
 
     // if the college is on the bottom of the bracket, add the step.
     if (idx % 2 === 1) {
