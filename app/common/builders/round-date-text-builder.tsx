@@ -2,6 +2,7 @@ import TextAlignEnum from "../enums/text-align-enum";
 import TournamentRound from "../enums/tournament-round-enum";
 import RoundDates, { RoundsWithoutWinner } from "../types/round-dates";
 import TextObject from "../types/text-object";
+import { CANVAS_WIDTH } from "./canvas-builder";
 
 function generateRoundDates(roundDates: RoundDates): TextObject[] {
     const validRounds: RoundsWithoutWinner[] = [
@@ -29,7 +30,7 @@ function buildRoundDate(roundEnum: TournamentRound, dates: string): TextObject {
 function generateX(roundEnum: TournamentRound) {
     switch (roundEnum) {
         case TournamentRound.FirstFour:
-            return 1918 / 2
+            return CANVAS_WIDTH / 2
         default:
             return 20;
     }

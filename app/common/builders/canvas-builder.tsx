@@ -4,6 +4,9 @@ import TextObject from "../types/text-object";
 const COLLEGE_FONT = "22px Arial";
 const ROUND_FONT = "18px Arial";
 
+export const CANVAS_HEIGHT = 1500;
+export const CANVAS_WIDTH = 1918;
+
 function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, colleges: TextObject[], rounds: TextObject[]) {
     // Create a canvas which we can draw the bracket onto.
     const canvas = document.createElement('canvas');
@@ -11,15 +14,15 @@ function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, colleg
     const ctx = canvas.getContext('2d');
     if (ctx === null) return;
 
-    canvas.width = 1918;
-    canvas.height = 1500;
+    canvas.width = CANVAS_WIDTH;
+    canvas.height = CANVAS_HEIGHT;
 
     // Set bracket as background image
     const base = new Image();
     base.onload = () => {
         ctx.drawImage(base, 0, 0);
         drawTextObjects(ctx, colleges, COLLEGE_FONT);
-        drawTextObjects(ctx, rounds, COLLEGE_FONT);
+        drawTextObjects(ctx, rounds, ROUND_FONT);
         exportCanvasToImage(canvas, imageRef.current)
     }
     base.src = 'images/bracket.png';

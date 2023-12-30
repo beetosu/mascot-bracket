@@ -18,6 +18,7 @@ export default function WinState({ matchHistory, tournament }: WinStateProps ) {
     <Bracket 
       collegeTextObjects={generateCollegeTextObjects(collegeNames)}
       roundTextObjects={generateRoundDates(tournament.roundDates)}
+      tournament={tournament}
     />
   )
 }
