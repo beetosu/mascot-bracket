@@ -29,16 +29,30 @@ function buildRoundDate(roundEnum: TournamentRound, dates: string): TextObject {
 
 function generateX(roundEnum: TournamentRound) {
     switch (roundEnum) {
-        case TournamentRound.FirstFour:
-            return CANVAS_WIDTH / 2
+        case TournamentRound.First:
+            return 125;
+        case TournamentRound.Second:
+            return 295;
+        case TournamentRound.Sixteen:
+            return 485;
+        case TournamentRound.Eight:
+            return 665;
+        case TournamentRound.FinalFour:
+            return 840;
         default:
-            return 20;
+            return CANVAS_WIDTH / 2;
     }
 }
 
 function generateY(roundEnum: TournamentRound) {
-    const isFirstFour = roundEnum === TournamentRound.FirstFour;
-    return isFirstFour ? 1250 : 115
+    switch (roundEnum) {
+        case TournamentRound.FirstFour:
+            return 1225;
+        case TournamentRound.Championship:
+            return 605;
+        default:
+            return 110;
+    }
 }
 
 export default generateRoundDates;

@@ -7,7 +7,7 @@ export const CANVAS_WIDTH = 1918;
 
 function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, bracketTextObjects: BracketTextObjects) {
     const COLLEGE_FONT = fontString(22);
-    const ROUND_FONT = fontString(18);
+    const ROUND_FONT = fontString(17);
     const NAME_FONT = fontString(48, 'bold');
 
     // Create a canvas which we can draw the bracket onto.
