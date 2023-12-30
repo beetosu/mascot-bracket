@@ -2,13 +2,13 @@ import { MutableRefObject } from "react";
 import TextObject from "../types/text-object";
 import BracketTextObjects from "../types/bracket-text-objects";
 
-export const CANVAS_HEIGHT = 1500;
-export const CANVAS_WIDTH = 1918;
+export const CANVAS_HEIGHT = 750;
+export const CANVAS_WIDTH = 971;
 
 function buildCanvas(imageRef: MutableRefObject<HTMLImageElement | null>, bracketTextObjects: BracketTextObjects) {
-    const COLLEGE_FONT = fontString(22);
-    const ROUND_FONT = fontString(17);
-    const NAME_FONT = fontString(48, 'bold');
+    const COLLEGE_FONT = fontString(11);
+    const ROUND_FONT = fontString(8);
+    const NAME_FONT = fontString(24, 'bold');
 
     // Create a canvas which we can draw the bracket onto.
     const canvas = document.createElement('canvas');

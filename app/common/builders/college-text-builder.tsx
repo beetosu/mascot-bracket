@@ -1,6 +1,7 @@
 import TournamentRound, { determineRound, getNextRound } from '@/app/common/enums/tournament-round-enum';
 import TextObject from '../types/text-object';
 import TextAlignEnum from '../enums/text-align-enum';
+import { CANVAS_HEIGHT, CANVAS_WIDTH } from './canvas-builder';
 
 /**
  * Build a list of text objects to display on the bracket canvas.
@@ -28,7 +29,6 @@ function generateCollegeTextObjects(matchHistory: string[]): TextObject[] {
  */
 function determineX(idx: number): number {
     const currentRound = determineRound(idx);
-    const canvasWidth = 1941;
 
     if (currentRound === TournamentRound.FirstFour) return determineFirstFourX(idx);
 
@@ -37,7 +37,7 @@ function determineX(idx: number): number {
     // or right hand side.
     let x = getXStep(currentRound);
     if (isRight(idx)) {
-        x = canvasWidth - x;
+        x = CANVAS_WIDTH - x;
     }
 
     return x;
@@ -147,19 +147,19 @@ function isRight(idx: number): boolean {
 function getXStep(currentRound: TournamentRound): number {
     switch (currentRound) {
         case TournamentRound.First:
-            return 62;
+            return 31;
         case TournamentRound.Second:
-            return 220;
+            return 112;
         case TournamentRound.Sixteen:
-            return 410;
+            return 205;
         case TournamentRound.Eight:
-            return 590;
+            return 295;
         case TournamentRound.FinalFour:
-            return 780;
+            return 385;
         case TournamentRound.Championship:
-            return 695;
+            return 350;
         default:
-            return 915;
+            return CANVAS_WIDTH / 2;
     }
 }
   
@@ -171,19 +171,17 @@ function getXStep(currentRound: TournamentRound): number {
 function getYStart(currentRound: TournamentRound): number {
     switch (currentRound) {
         case TournamentRound.First:
-            return 230;
+            return 115;
         case TournamentRound.Second:
-            return 245;
+            return 123;
         case TournamentRound.Sixteen:
-            return 275;
+            return 140;
         case TournamentRound.Eight:
-            return 335;
+            return 170;
         case TournamentRound.FinalFour:
-            return 455;
-        case TournamentRound.Championship:
-            return 715;
+            return 230;
         default:
-            return 715;
+            return (CANVAS_HEIGHT / 2) - 15;
     }
   }
   
@@ -195,15 +193,15 @@ function getYStart(currentRound: TournamentRound): number {
 function getYStep(currentRound: TournamentRound): number {
     switch (currentRound) {
         case TournamentRound.First:
-            return 30.5;
+            return 15.25;
         case TournamentRound.Second:
-            return 60.5;
+            return 30.25;
         case TournamentRound.Sixteen:
-            return 121;
+            return 60;
         case TournamentRound.Eight:
-            return 245;
+            return 120;
         case TournamentRound.FinalFour:
-            return 520;
+            return 260;
         case TournamentRound.Championship:
             return 0;
         default:
@@ -219,13 +217,13 @@ function getYStep(currentRound: TournamentRound): number {
   export function getYGap(currentRound: TournamentRound): number {
     switch (currentRound) {
         case TournamentRound.First:
-            return 30;
+            return 15;
         case TournamentRound.Second:
-            return 35;
+            return 17;
         case TournamentRound.Sixteen:
-            return 35;
+            return 19;
         case TournamentRound.Eight:
-            return 25;
+            return 19;
         default:
             return 0;
     }
