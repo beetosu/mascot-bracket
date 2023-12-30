@@ -15,13 +15,24 @@ function generateRoundDates(roundDates: RoundDates): TextObject[] {
         TournamentRound.Championship
     ]
 
-    return validRounds.map(r => buildRoundDate(r, roundDates[r]))
+    let roundTextObjects = validRounds.map(r => buildRoundDate(r, roundDates[r]));
+
+    const mirrorRounds: RoundsWithoutWinner[] = [
+        TournamentRound.First,
+        TournamentRound.Second,
+        TournamentRound.Sixteen,
+        TournamentRound.Eight,
+        TournamentRound.FinalFour
+    ]
+    roundTextObjects.push(...mirrorRounds.map(r => buildRoundDate(r, roundDates[r], true)))
+
+    return roundTextObjects;
 }
 
-function buildRoundDate(roundEnum: TournamentRound, dates: string): TextObject {
+function buildRoundDate(roundEnum: TournamentRound, dates: string, isRight?: boolean): TextObject {
     return {
         text: dates,
-        x: generateX(roundEnum),
+        x: isRight ? CANVAS_WIDTH - generateX(roundEnum) : generateX(roundEnum),
         y: generateY(roundEnum),
         textAlign: TextAlignEnum.Center
     }
