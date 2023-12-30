@@ -117,7 +117,7 @@ export default function Home() {
         {game}
       </main>
       <footer className={styles.footer}>
-        by <a href="https://cwalsh.dev">Colin Walsh</a> | <a href="mailto:contact@cwalsh.dev">contact@cwalsh.dev</a>
+        by <a href="https://cwalsh.dev">Colin Walsh</a> | <a href="https://github.com/beetosu/mascot-bracket">Source</a> | <a href="mailto:contact@cwalsh.dev">contact@cwalsh.dev</a>
       </footer>
     </div>
   )

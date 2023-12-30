@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Mascot Bracket',
-  description: 'Made by Joe Biden',
+  description: 'Create a printable bracket for the 2024 NCAA March Madness tournament based on the college\'s mascots!'
 }
 
 export default function RootLayout({
