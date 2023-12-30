@@ -26,7 +26,7 @@ function generateTournamentNameTextObject(tournamentName: string): TextObject {
   return {
     text: tournamentName,
     x: CANVAS_WIDTH / 2,
-    y: 100,
+    y: 285,
     textAlign: TextAlignEnum.Center
   }
 }
