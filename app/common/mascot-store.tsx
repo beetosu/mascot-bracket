@@ -462,7 +462,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     },
     [CollegeEnum.BethuneCookman]: {
         collegeName: 'Bethune Cookman',
-        shortCollegeName: 'B Cookman',
+        shortCollegeName: 'B. Cookman',
         mascotName: 'Unknown',
         imgSrc: 'unknown.png'
     },
