@@ -356,98 +356,98 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     },
     [CollegeEnum.Merrimack]: {
         collegeName: 'Merrimack',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Mack the Warrior',
+        imgSrc: 'merrimack.png'
     },
     [CollegeEnum.Southern]: {
         collegeName: 'Southern',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Lacumba',
+        imgSrc: 'southern.jpg'
     },
     [CollegeEnum.OralRoberts]: {
         collegeName: 'Oral Roberts',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Eli',
+        imgSrc: 'oralroberts.jpg'
     },
     [CollegeEnum.Dayton]: {
         collegeName: 'Dayton',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Rudy Flyer',
+        imgSrc: 'dayton.jpg'
     },
     [CollegeEnum.IndianaSt]: {
         collegeName: 'Indiana St.',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Sycamore Sam',
+        imgSrc: 'indianast.webp'
     },
     [CollegeEnum.Clemson]: {
         collegeName: 'Clemson',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'The Tiger',
+        imgSrc: 'clemson.jpg'
     },
     [CollegeEnum.FAU]: {
         collegeName: 'FAU',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Owlsley and Hoot',
+        imgSrc: 'fau.jpg'
     },
     [CollegeEnum.MoreheadSt]: {
         collegeName: 'Morehead St.',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Beaker',
+        imgSrc: 'moreheadst.jpg'
     },
     [CollegeEnum.Marist]: {
         collegeName: 'Marist',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Frankie the Red Fox',
+        imgSrc: 'marist.jpg'
     },
     [CollegeEnum.Princeton]: {
         collegeName: 'Princeton',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'The Tiger',
+        imgSrc: 'princeton.png'
     },
     [CollegeEnum.UNCW]: {
         collegeName: 'UNCW',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Sammy C. Hawk',
+        imgSrc: 'uncw.jpg'
     },
     [CollegeEnum.FortWayne]: {
         collegeName: 'Fort Wayne',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Ruby',
+        imgSrc: 'fortwayne.png'
     },
     [CollegeEnum.WeberSt]: {
         collegeName: 'Weber St.',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Waldo the Wildcat',
+        imgSrc: 'weberst.jpg'
     },
     [CollegeEnum.GrandCanyon]: {
         collegeName: 'Grand Canyon',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Thunder',
+        imgSrc: 'grandcanyon.jpg'
     },
     [CollegeEnum.UCIrvine]: {
         collegeName: 'UC Irvine',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Peter the Anteater',
+        imgSrc: 'ucirvine.jpg'
     },
     [CollegeEnum.Samford]: {
         collegeName: 'Samford',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Spike the Bulldog',
+        imgSrc: 'samford.jpg'
     },
     [CollegeEnum.Lipscomb]: {
         collegeName: 'Lipscomb',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'LU Bison',
+        imgSrc: 'lipscomb.jpg'
     },
     [CollegeEnum.Liberty]: {
         collegeName: 'Liberty',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Sparky the Eagle',
+        imgSrc: 'liberty.png'
     },
     [CollegeEnum.McNesseSt]: {
         collegeName: 'McNesse St.',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Rowdy the Cowboy',
+        imgSrc: 'mcnessest.png'
     },
 }
 
