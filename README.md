@@ -6,7 +6,7 @@ All mascot images are sourced from the official website or social media associat
 
 The icon for this page is sourced from [Twemoji](https://twemoji.twitter.com/).
 
-Below is a portion of the README.md generated when this page was bootstrapped, kept to instruct users on running this page locally. Unlike the note below, however, current deployment builds the page staticlly using `npm run build`.
+Below is a portion of the README.md generated when this page was bootstrapped:
 
 ----
 
