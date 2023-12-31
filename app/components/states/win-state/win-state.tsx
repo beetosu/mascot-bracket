@@ -35,7 +35,7 @@ function generateTournamentNameTextObject(tournamentName: string): TextObject {
 
 export default function WinState({ matchHistory, tournament }: WinStateProps ) {
 
-  const collegeNames = matchHistory.map(m => MascotStore[m].collegeName);
+  const collegeNames = matchHistory.map(m => MascotStore[m].shortCollegeName ?? MascotStore[m].collegeName);
   const bracketTextObjects = buildBracketTextObjects(collegeNames, tournament);
 
   return (
