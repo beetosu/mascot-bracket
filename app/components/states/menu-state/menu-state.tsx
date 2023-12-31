@@ -3,10 +3,10 @@
 import { ExtraData } from '@/app/page';
 import styles from './menu-state.module.css'
 import GameStateEnum from '@/app/common/enums/game-state-enum';
-import mens2022 from '@/app/common/tournaments/mens-2022';
 import TournamentButton from '../../tournament-button/tournament-button';
 import Tournament from '@/app/common/types/tournament';
 import mens2024 from '@/app/common/tournaments/mens-2024';
+import womens2024 from '@/app/common/tournaments/womens-2024';
 
 type MenuStateProps = { 
   handleGameStateTransition: (upcomingGameState: GameStateEnum, extraData?: ExtraData) => void,
@@ -36,7 +36,7 @@ export default function MenuState({ handleGameStateTransition }: MenuStateProps)
           key={WOMENS_NAME}
           selectTournament={selectTournament}
           name={WOMENS_NAME}
-          tournament={mens2022}
+          tournament={womens2024}
         />
       </div>
     </div>

@@ -86,7 +86,28 @@ enum CollegeEnum {
     Samford,
     Lipscomb,
     Liberty,
-    McNesseSt
+    McNesseSt,
+    IncarnateWord,
+    SacredHeart,
+    BethuneCookman,
+    Presbyterian,
+    SouthCarolina,
+    Albany,
+    ClevelandSt,
+    GeorgiaSouthern,
+    UNLV,
+    SouthDakota,
+    Washington,
+    Lehigh,
+    WesternIllinois,
+    BallState,
+    CaliforniaBaptist,
+    MiddleTennessee,
+    Fairfield,
+    EasternKentucky,
+    NorthTexas,
+    StonyBrook,
+    NorthernArizona
 }
 
 export default CollegeEnum;

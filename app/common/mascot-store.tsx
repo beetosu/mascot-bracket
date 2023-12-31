@@ -2,6 +2,7 @@ import CollegeEnum from "./enums/college-enum"
 
 export type MascotData = {
     collegeName: string,
+    shortCollegeName?: string,
     mascotName: string,
     imgSrc: string,
     isUnofficial?: boolean
@@ -448,6 +449,117 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         collegeName: 'McNesse St.',
         mascotName: 'Rowdy the Cowboy',
         imgSrc: 'mcnessest.png'
+    },
+    [CollegeEnum.IncarnateWord]: {
+        collegeName: 'Incarnate Word',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.SacredHeart]: {
+        collegeName: 'Sacred Heart',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.BethuneCookman]: {
+        collegeName: 'Bethune Cookman',
+        shortCollegeName: 'B Cookman',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.Presbyterian]: {
+        collegeName: 'Presbyterian',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.SouthCarolina]: {
+        collegeName: 'South Carolina',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.Albany]: {
+        collegeName: 'Albany',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.ClevelandSt]: {
+        collegeName: 'Cleveland St.',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.GeorgiaSouthern]: {
+        collegeName: 'Georgia Southern',
+        shortCollegeName: 'Georgia S.',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.UNLV]: {
+        collegeName: 'UNLV',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.SouthDakota]: {
+        collegeName: 'South Dakota',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.Washington]: {
+        collegeName: 'Washington',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.Lehigh]: {
+        collegeName: 'Lehigh',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.WesternIllinois]: {
+        collegeName: 'Western Illinois',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.BallState]: {
+        collegeName: 'Ball State',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.CaliforniaBaptist]: {
+        collegeName: 'California Baptist',
+        shortCollegeName: 'Cali Baptist',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.MiddleTennessee]: {
+        collegeName: 'Middle Tennessee',
+        shortCollegeName: 'Mid Tennessee',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.Fairfield]: {
+        collegeName: 'Fairfield',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.EasternKentucky]: {
+        collegeName: 'Eastern Kentucky',
+        shortCollegeName: 'E. Kentucky',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.NorthTexas]: {
+        collegeName: 'North Texas',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.StonyBrook]: {
+        collegeName: 'Stony Brook',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
+    },
+    [CollegeEnum.NorthernArizona]: {
+        collegeName: 'Northern Arizona',
+        shortCollegeName: 'N. Arizona',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.png'
     },
 }
 
