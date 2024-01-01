@@ -27,3 +27,10 @@
         padding: 0;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .gameState .header {
+        background-color: #585858aa;
+        color: #fff;
+    }
+}

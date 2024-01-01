@@ -36,4 +36,8 @@ body {
   html {
     color-scheme: dark;
   }
+
+  body {
+    background: radial-gradient(circle, rgb(79, 68, 99) 0%, rgb(68, 93, 109) 100%);;
+  }
 }

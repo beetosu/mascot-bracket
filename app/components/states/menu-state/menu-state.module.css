@@ -18,3 +18,9 @@
     display: flex;
     gap: 8px;
 }
+
+@media (prefers-color-scheme: dark) {
+    .menuState {
+        background-color: #747474aa;
+    }
+}

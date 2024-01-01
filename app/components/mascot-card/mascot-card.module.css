@@ -82,3 +82,18 @@
         max-height: 250px;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .mascotButton {
+        background-color: #585858aa;
+        color: #fff;
+    }
+
+    .mascotButton:hover {
+        background-color: #808080aa;
+    }
+    
+    .mascotButton:active {
+        background-color: #444444aa;
+    }
+}

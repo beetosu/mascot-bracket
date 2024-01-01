@@ -13,3 +13,17 @@
 .tournamentButton:active {
     background-color: #aaaaaaaa;
 }
+
+@media (prefers-color-scheme: dark) {
+    .tournamentButton {
+        background-color: #585858aa;
+    }
+
+    .tournamentButton:hover {
+        background-color: #808080aa;
+    }
+    
+    .tournamentButton:active {
+        background-color: #444444aa;
+    }
+}
