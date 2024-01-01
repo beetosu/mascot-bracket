@@ -42,7 +42,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     [CollegeEnum.Bryant]: {
         collegeName: 'Bryant',
         mascotName: 'Tupper',
-        imgSrc: 'bryant.jpg'
+        imgSrc: 'bryant.png'
     },
     [CollegeEnum.Rutgers]: {
         collegeName: 'Rutgers',
@@ -452,114 +452,114 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     },
     [CollegeEnum.IncarnateWord]: {
         collegeName: 'Incarnate Word',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Red the Cardinal',
+        imgSrc: 'incarnateword.jpg'
     },
     [CollegeEnum.SacredHeart]: {
         collegeName: 'Sacred Heart',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Big Red the Pioneer',
+        imgSrc: 'sacredheart.jpg'
     },
     [CollegeEnum.BethuneCookman]: {
         collegeName: 'Bethune Cookman',
         shortCollegeName: 'B. Cookman',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Wil D Cat',
+        imgSrc: 'bethunecookman.jpg'
     },
     [CollegeEnum.Presbyterian]: {
         collegeName: 'Presbyterian',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Blue Hose',
+        imgSrc: 'presbyterian.jpg'
     },
     [CollegeEnum.SouthCarolina]: {
         collegeName: 'South Carolina',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Cocky',
+        imgSrc: 'southcarolina.jpg'
     },
     [CollegeEnum.Albany]: {
         collegeName: 'Albany',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Damien',
+        imgSrc: 'albany.jpg'
     },
     [CollegeEnum.ClevelandSt]: {
         collegeName: 'Cleveland St.',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Magnus',
+        imgSrc: 'clevelandst.png'
     },
     [CollegeEnum.GeorgiaSouthern]: {
         collegeName: 'Georgia Southern',
         shortCollegeName: 'Georgia S.',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'GUS the Eagle',
+        imgSrc: 'georgiasouthern.jpg'
     },
     [CollegeEnum.UNLV]: {
         collegeName: 'UNLV',
-        mascotName: 'Unknown',
+        mascotName: '[No Mascot]',
         imgSrc: 'unknown.png'
     },
     [CollegeEnum.SouthDakota]: {
         collegeName: 'South Dakota',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Charlie Coyote',
+        imgSrc: 'southdakota.jpg'
     },
     [CollegeEnum.Washington]: {
         collegeName: 'Washington',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Harry the Husky',
+        imgSrc: 'washington.jpg'
     },
     [CollegeEnum.Lehigh]: {
         collegeName: 'Lehigh',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Clutch the Mointain Hawk',
+        imgSrc: 'lehigh.png'
     },
     [CollegeEnum.WesternIllinois]: {
         collegeName: 'Western Illinois',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Rocky the Bulldog',
+        imgSrc: 'wiu.jfif'
     },
     [CollegeEnum.BallState]: {
         collegeName: 'Ball State',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Charlie Cardinal',
+        imgSrc: 'ballstate.jpg'
     },
     [CollegeEnum.CaliforniaBaptist]: {
         collegeName: 'California Baptist',
         shortCollegeName: 'Cali Baptist',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Lance the Lancer',
+        imgSrc: 'calibaptist.png'
     },
     [CollegeEnum.MiddleTennessee]: {
         collegeName: 'Middle Tennessee',
         shortCollegeName: 'Mid Tennessee',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Lightning',
+        imgSrc: 'midtennessee.jpg'
     },
     [CollegeEnum.Fairfield]: {
         collegeName: 'Fairfield',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Lucus the Stag',
+        imgSrc: 'fairfield.jpg'
     },
     [CollegeEnum.EasternKentucky]: {
         collegeName: 'Eastern Kentucky',
         shortCollegeName: 'E. Kentucky',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'The Colonel',
+        imgSrc: 'eastkentucky.jpg'
     },
     [CollegeEnum.NorthTexas]: {
         collegeName: 'North Texas',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Scrappy',
+        imgSrc: 'northtexas.png'
     },
     [CollegeEnum.StonyBrook]: {
         collegeName: 'Stony Brook',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Wolfie Seawolf',
+        imgSrc: 'stonybrook.jpg'
     },
     [CollegeEnum.NorthernArizona]: {
         collegeName: 'Northern Arizona',
         shortCollegeName: 'N. Arizona',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        mascotName: 'Louie the Lumberjack',
+        imgSrc: 'narizona.jpeg'
     },
 }
 
