@@ -8,6 +8,7 @@ import GameStateEnum from '@/app/common/enums/game-state-enum';
 import BracketInfo from '@/app/common/types/bracket-info';
 import CollegeEnum from '@/app/common/enums/college-enum';
 import Tournament from '@/app/common/types/tournament';
+import TournamentRound, { determineRound, getRoundName } from '@/app/common/enums/tournament-round-enum';
 
 type TournamentStateProps = { 
   handleGameStateTransition: (upcomingGameState: GameStateEnum, extraData?: ExtraData) => void,
@@ -40,6 +41,7 @@ export default function TournamentState({ handleGameStateTransition, tournament 
   const [rightMatch, updateRightMatch] = useState<BracketInfo | undefined>(initialMatchQueue[0][1]);
 
   const [matchHistory, updateMatchHistory] = useState<CollegeEnum[]>([]);
+  const [currentRound, updateCurrentRound] = useState<TournamentRound>(TournamentRound.FirstFour);
   
   /**
    * Advance the match queue forward.
@@ -66,28 +68,37 @@ export default function TournamentState({ handleGameStateTransition, tournament 
     updateMatchHistory(matchHistory);
 
     updateMatchQueue(matchQueue);
-    updateLeftMatch(matchQueue[0][0])
-    updateRightMatch(matchQueue[0][1])
+    updateLeftMatch(matchQueue[0][0]);
+    updateRightMatch(matchQueue[0][1]);
 
     if (matchQueue.length === 1 && matchQueue[0][1] === undefined) {
       handleGameStateTransition(GameStateEnum.Win, { matchHistory });
     }
+
+    const collegesPassed = matchHistory.length * 2;
+    const newRound = determineRound(collegesPassed);
+    if (newRound !== currentRound) updateCurrentRound(newRound)
   }
 
   return (
     <div className={styles.gameState}>
-      <MascotCard 
-        key={`${leftMatch.id}-${leftMatch.rank}-left`}
-        bracketInfo={leftMatch}
-        handleQueueUpdate={handleQueueUpdate}
-        isLeft={true}
-      />
-      <MascotCard 
-        key={`${rightMatch?.id ?? -1}-${rightMatch?.rank ?? -1}-right`}
-        bracketInfo={rightMatch}
-        handleQueueUpdate={handleQueueUpdate}
-        isLeft={false}
-      />
+      <p className={styles.header}>
+        {getRoundName(currentRound)}
+      </p>
+      <div className={styles.buttons}>
+        <MascotCard 
+          key={`${leftMatch.id}-${leftMatch.rank}-left`}
+          bracketInfo={leftMatch}
+          handleQueueUpdate={handleQueueUpdate}
+          isLeft={true}
+        />
+        <MascotCard 
+          key={`${rightMatch?.id ?? -1}-${rightMatch?.rank ?? -1}-right`}
+          bracketInfo={rightMatch}
+          handleQueueUpdate={handleQueueUpdate}
+          isLeft={false}
+        />
+      </div>
     </div>
   )
 }

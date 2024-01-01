@@ -52,6 +52,13 @@
     font-size: 14px;
 }
 
+@media screen and (max-width: 700px) {
+    .mascotButton.left,
+    .mascotButton.right {
+        box-shadow: 0px 3px 7px #00000044;
+    }
+}
+
 @media screen and (max-width: 700px) and (max-height: 850px) {
     .mascotButton .captionContainer {
         display: flex;

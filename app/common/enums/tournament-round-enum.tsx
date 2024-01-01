@@ -47,4 +47,30 @@ export function getNextRound(currentRound: TournamentRound): TournamentRound | n
   }
 }
 
+/**
+ * Maps a round enum with the enum representing the next round.
+ * @param currentRound the round we want to find the next round for.
+ * @returns the round that is the next round, relative to the currentRound.
+ */
+export function getRoundName(currentRound: TournamentRound): string | null {
+  switch (currentRound) {
+    case TournamentRound.FirstFour:
+      return "First Four"
+    case TournamentRound.First:
+      return "First Round";
+    case TournamentRound.Second:
+      return "Second Round";
+    case TournamentRound.Sixteen:
+      return "Sweet Sixteen";
+    case TournamentRound.Eight:
+      return "Elite Eight";
+    case TournamentRound.FinalFour:
+      return "Final Four";
+    case TournamentRound.Championship:
+      return "Championship"
+    default:
+      return null;
+  }
+}
+
 export default TournamentRound;
