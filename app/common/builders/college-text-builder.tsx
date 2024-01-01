@@ -185,11 +185,11 @@ function getYStart(currentRound: TournamentRound): number {
     }
   }
   
-  /**
-   * Map the round enum to a yStep value.
-   * @param currentRound The round we want to find the yStep for.
-   * @returns The yStep associated with the round.
-   */
+/**
+ * Map the round enum to a yStep value.
+ * @param currentRound The round we want to find the yStep for.
+ * @returns The yStep associated with the round.
+ */
 function getYStep(currentRound: TournamentRound): number {
     switch (currentRound) {
         case TournamentRound.First:
@@ -209,12 +209,12 @@ function getYStep(currentRound: TournamentRound): number {
     }
 }
   
-  /**
-   * Map the round enum to a yGap value.
-   * @param currentRound The round we want to find the yGap for.
-   * @returns The yGap associated with the round.
-   */
-  export function getYGap(currentRound: TournamentRound): number {
+/**
+ * Map the round enum to a yGap value.
+ * @param currentRound The round we want to find the yGap for.
+ * @returns The yGap associated with the round.
+ */
+export function getYGap(currentRound: TournamentRound): number {
     switch (currentRound) {
         case TournamentRound.First:
             return 15;
@@ -227,6 +227,6 @@ function getYStep(currentRound: TournamentRound): number {
         default:
             return 0;
     }
-  }
+}
 
 export default generateCollegeTextObjects;
