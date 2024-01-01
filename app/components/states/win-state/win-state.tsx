@@ -15,6 +15,12 @@ type WinStateProps = {
   tournament: Tournament
 }
 
+/**
+ * Create text objects to draw onto the canvas, based on the tournament and the player choices.
+ * @param collegeNames The names of the colleges, with the initial ranking/placements, followed by the player choice.
+ * @param tournament The tournament that was selected.
+ * @returns An object that holds text objects, ordered by type.
+ */
 function buildBracketTextObjects(collegeNames: string[], tournament: Tournament): BracketTextObjects {
   return {
     tournamentName: generateTournamentNameTextObject(tournament.name),
@@ -24,6 +30,11 @@ function buildBracketTextObjects(collegeNames: string[], tournament: Tournament)
   }
 }
 
+/**
+ * Generate a text object for the name of the selected tournament.
+ * @param tournamentName The name of the selected tournament.
+ * @returns A text object, representing the tournamnent name.
+ */
 function generateTournamentNameTextObject(tournamentName: string): TextObject {
   return {
     text: tournamentName,
