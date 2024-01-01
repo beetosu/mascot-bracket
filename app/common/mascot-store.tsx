@@ -12,7 +12,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     [CollegeEnum.Unknown]: {
         collegeName: 'Unknown',
         mascotName: 'Unknown',
-        imgSrc: 'unknown.png'
+        imgSrc: 'unknown.gif'
     },
     [CollegeEnum.TexasSouthern]: {
         collegeName: 'Texas Southern',
@@ -32,7 +32,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     [CollegeEnum.Indiana]: {
         collegeName: 'Indiana',
         mascotName: '[No Mascot]',
-        imgSrc: 'unknown.png'
+        imgSrc: 'unknown.gif'
     },
     [CollegeEnum.WrightSt]: {
         collegeName: 'Wright St.',
@@ -202,7 +202,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     [CollegeEnum.StPeters]: {
         collegeName: "St Peter's",
         mascotName: 'Peacock',
-        imgSrc: 'unknown.png'
+        imgSrc: 'unknown.gif'
     },
     [CollegeEnum.Arizona]: {
         collegeName: 'Arizona',
@@ -248,7 +248,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     [CollegeEnum.Michigan]: {
         collegeName: 'Michigan',
         mascotName: '[No Mascot]',
-        imgSrc: 'unknown.png'
+        imgSrc: 'unknown.gif'
     },
     [CollegeEnum.Tennessee]: {
         collegeName: 'Tennessee',
@@ -288,7 +288,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     [CollegeEnum.SanDiegoSt]: {
         collegeName: 'San Diego St.',
         mascotName: '[No Mascot]',
-        imgSrc: 'unknown.png'
+        imgSrc: 'unknown.gif'
     },
     [CollegeEnum.Creighton]: {
         collegeName: 'Creighton',
@@ -495,7 +495,7 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     [CollegeEnum.UNLV]: {
         collegeName: 'UNLV',
         mascotName: '[No Mascot]',
-        imgSrc: 'unknown.png'
+        imgSrc: 'unknown.gif'
     },
     [CollegeEnum.SouthDakota]: {
         collegeName: 'South Dakota',
