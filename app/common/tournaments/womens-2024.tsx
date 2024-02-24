@@ -6,36 +6,36 @@ import Tournament from "../types/tournament";
 
 const womens2024Bracket: BracketInfo[] = [
     {
-        id: CollegeEnum.IncarnateWord,
+        id: CollegeEnum.HighPoint,
         rank: 16
+    },
+    {
+        id: CollegeEnum.EasternIllinois,
+        rank: 16
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 11
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 11
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 11
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 11
     },
     {
         id: CollegeEnum.SacredHeart,
         rank: 16
     },
     {
-        id: CollegeEnum.BethuneCookman,
+        id: CollegeEnum.HolyCross,
         rank: 16
-    },
-    {
-        id: CollegeEnum.Presbyterian,
-        rank: 16
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 11
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 11
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 11
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 11
     },
     {
         id: CollegeEnum.SouthCarolina,
@@ -51,7 +51,7 @@ const womens2024Bracket: BracketInfo[] = [
         rank: 8
     },
     {
-        id: CollegeEnum.Davidson,
+        id: CollegeEnum.Unknown,
         rank: 9
     },
     {
@@ -59,7 +59,7 @@ const womens2024Bracket: BracketInfo[] = [
         rank: 5
     },
     {
-        id: CollegeEnum.Clemson,
+        id: CollegeEnum.SDakotaSt,
         rank: 12
     },
     {
@@ -67,7 +67,7 @@ const womens2024Bracket: BracketInfo[] = [
         rank: 4
     },
     {
-        id: CollegeEnum.Chattanooga,
+        id: CollegeEnum.Fairfield,
         rank: 13
     },
     {
@@ -75,15 +75,16 @@ const womens2024Bracket: BracketInfo[] = [
         rank: 6
     },
     {
-        id: CollegeEnum.Princeton,
-        rank: 11
+        id: CollegeEnum.Unknown,
+        rank: 11,
+        firstFour: 1
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.VirginiaTech,
         rank: 3
     },
     {
-        id: CollegeEnum.MurraySt,
+        id: CollegeEnum.Marshall,
         rank: 14
     },
     {
@@ -99,7 +100,7 @@ const womens2024Bracket: BracketInfo[] = [
         rank: 2
     },
     {
-        id: CollegeEnum.Albany,
+        id: CollegeEnum.Temple,
         rank: 15
     },
     {
@@ -107,36 +108,35 @@ const womens2024Bracket: BracketInfo[] = [
         rank: 1
     },
     {
-        id: CollegeEnum.Unknown,
-        rank: 16,
-        firstFour: 1
+        id: CollegeEnum.NorfolkSt,
+        rank: 16
     },
     {
         id: CollegeEnum.Unknown,
         rank: 8
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Princeton,
         rank: 9
     },
     {
-        id: CollegeEnum.Gonzaga,
+        id: CollegeEnum.Unknown,
         rank: 5
     },
     {
-        id: CollegeEnum.ClevelandSt,
+        id: CollegeEnum.FloridaGulfCoast,
         rank: 12
     },
     {
-        id: CollegeEnum.Marquette,
+        id: CollegeEnum.Unknown,
         rank: 4
     },
     {
-        id: CollegeEnum.GeorgiaSouthern,
+        id: CollegeEnum.ClevelandSt,
         rank: 13
     },
     {
-        id: CollegeEnum.UNLV,
+        id: CollegeEnum.Unknown,
         rank: 6
     },
     {
@@ -145,75 +145,11 @@ const womens2024Bracket: BracketInfo[] = [
         firstFour: 2
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.UConn,
         rank: 3
     },
     {
-        id: CollegeEnum.SouthDakota,
-        rank: 14
-    },
-    {
-        id: CollegeEnum.Washington,
-        rank: 7
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 10
-    },
-    {
-        id: CollegeEnum.Texas,
-        rank: 2
-    },
-    {
-        id: CollegeEnum.Lehigh,
-        rank: 15
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 1
-    },
-    {
-        id: CollegeEnum.WesternIllinois,
-        rank: 16
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 8
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 9
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 5
-    },
-    {
-        id: CollegeEnum.BallState,
-        rank: 12
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 4
-    },
-    {
-        id: CollegeEnum.CaliforniaBaptist,
-        rank: 13
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 6
-    },
-    {
-        id: CollegeEnum.MiddleTennessee,
-        rank: 11
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 3
-    },
-    {
-        id: CollegeEnum.Fairfield,
+        id: CollegeEnum.Chattanooga,
         rank: 14
     },
     {
@@ -229,19 +165,19 @@ const womens2024Bracket: BracketInfo[] = [
         rank: 2
     },
     {
-        id: CollegeEnum.UCIrvine,
+        id: CollegeEnum.JacksonSt,
         rank: 15
     },
     {
-        id: CollegeEnum.Iowa,
+        id: CollegeEnum.Stanford,
         rank: 1
     },
     {
-        id: CollegeEnum.EasternKentucky,
+        id: CollegeEnum.Lamar,
         rank: 16
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.UNLV,
         rank: 8
     },
     {
@@ -253,11 +189,11 @@ const womens2024Bracket: BracketInfo[] = [
         rank: 5
     },
     {
-        id: CollegeEnum.NorthTexas,
+        id: CollegeEnum.Drake,
         rank: 12
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Gonzaga,
         rank: 4
     },
     {
@@ -270,15 +206,79 @@ const womens2024Bracket: BracketInfo[] = [
     },
     {
         id: CollegeEnum.Unknown,
-        rank: 11,
-        firstFour: 3
+        rank: 11
     },
     {
         id: CollegeEnum.Unknown,
         rank: 3
     },
     {
-        id: CollegeEnum.NorfolkSt,
+        id: CollegeEnum.GrandCanyon,
+        rank: 14
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 7
+    },
+    {
+        id: CollegeEnum.MiddleTennessee,
+        rank: 10
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 2
+    },
+    {
+        id: CollegeEnum.Albany,
+        rank: 15
+    },
+    {
+        id: CollegeEnum.OhioSt,
+        rank: 1
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 16,
+        firstFour: 3
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 8
+    },
+    {
+        id: CollegeEnum.Miami,
+        rank: 9
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 5
+    },
+    {
+        id: CollegeEnum.Richmond,
+        rank: 12
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 4
+    },
+    {
+        id: CollegeEnum.BallState,
+        rank: 13
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 6
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 11
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 3
+    },
+    {
+        id: CollegeEnum.EasternWashington,
         rank: 14
     },
     {
@@ -294,7 +294,7 @@ const womens2024Bracket: BracketInfo[] = [
         rank: 2
     },
     {
-        id: CollegeEnum.NorthernArizona,
+        id: CollegeEnum.JacksonSt,
         rank: 15
     }
 ];
