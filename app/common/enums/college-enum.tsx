@@ -107,7 +107,17 @@ enum CollegeEnum {
     EasternKentucky,
     NorthTexas,
     StonyBrook,
-    NorthernArizona
+    NorthernArizona,
+    HighPoint,
+    WashingtonSt,
+    AppalachianSt,
+    Charleston,
+    EasternWashington,
+    SamHouston,
+    UtahSt,
+    SouthFlorida,
+    Quinnipiac,
+    Oakland
 }
 
 export default CollegeEnum;

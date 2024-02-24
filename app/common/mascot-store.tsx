@@ -561,6 +561,57 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         mascotName: 'Louie the Lumberjack',
         imgSrc: 'narizona.jpeg'
     },
+    [CollegeEnum.HighPoint]: {
+        collegeName: 'High Point',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.WashingtonSt]: {
+        collegeName: 'Washington St.',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.AppalachianSt]: {
+        collegeName: 'Appalachian St.',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Charleston]: {
+        collegeName: 'Charleston',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.EasternWashington]: {
+        collegeName: 'Eastern Washington',
+        shortCollegeName: 'E. Washington',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.SamHouston]: {
+        collegeName: 'Sam Houston',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.UtahSt]: {
+        collegeName: 'Utah St.',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.SouthFlorida]: {
+        collegeName: 'South Florida',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Quinnipiac]: {
+        collegeName: 'Quinnipiac',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Oakland]: {
+        collegeName: 'Oakland',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
 }
 
 export default MascotStore
