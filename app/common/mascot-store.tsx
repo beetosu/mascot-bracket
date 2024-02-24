@@ -614,50 +614,51 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     },
     [CollegeEnum.HolyCross]: {
         collegeName: 'Holy Cross',
-        mascotName: 'Unknown',
+        mascotName: '[No Mascot]',
         imgSrc: 'unknown.gif'
     },
     [CollegeEnum.EasternIllinois]: {
         collegeName: 'Eastern Illinois',
         shortCollegeName: 'E Illinois',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Billy the Panther',
+        imgSrc: 'eiu.PNG'
     },
     [CollegeEnum.Marshall]: {
         collegeName: 'Marshall',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Marco the Bison',
+        imgSrc: 'marshall.jpeg'
     },
     [CollegeEnum.Temple]: {
         collegeName: 'Temple',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Hooter the Owl',
+        imgSrc: 'temple.jpg'
     },
     [CollegeEnum.FloridaGulfCoast]: {
         collegeName: 'Florida Gulf Coast',
         shortCollegeName: 'FGCU',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Azul the Eagle',
+        imgSrc: 'fgcu.jpg'
     },
     [CollegeEnum.JacksonSt]: {
         collegeName: 'Jackson St.',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Sonny Thee Tiger',
+        imgSrc: 'jacksonst.jpg'
     },
     [CollegeEnum.Stanford]: {
         collegeName: 'Stanford',
         mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        imgSrc: 'unknown.gif',
+        isUnofficial: true
     },
     [CollegeEnum.Lamar]: {
         collegeName: 'Lamar',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Big Red and Lu',
+        imgSrc: 'lamar.png'
     },
     [CollegeEnum.Drake]: {
         collegeName: 'Drake',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Griff II',
+        imgSrc: 'drake.gif'
     },
 }
 

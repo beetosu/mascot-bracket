@@ -6,6 +6,10 @@ All mascot images are sourced from the official website or social media associat
 
 The icon for this page is sourced from [Twemoji](https://twemoji.twitter.com/).
 
+The image used for the "Stanford Tree" is from the official Facebook page, run by the Leland Stanford Junior University Marching Band:
+https://www.facebook.com/stanfordtree
+https://lsjumb.stanford.edu/
+
 Below is a portion of the README.md generated when this page was bootstrapped:
 
 ----
