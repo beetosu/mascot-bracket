@@ -563,54 +563,54 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     },
     [CollegeEnum.HighPoint]: {
         collegeName: 'High Point',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Prowler',
+        imgSrc: 'highpoint.jfif'
     },
     [CollegeEnum.WashingtonSt]: {
         collegeName: 'Washington St.',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Butch T. Cougar',
+        imgSrc: 'washingtonst.jpg'
     },
     [CollegeEnum.AppalachianSt]: {
         collegeName: 'Appalachian St.',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Yosef',
+        imgSrc: 'appstate.png'
     },
     [CollegeEnum.Charleston]: {
         collegeName: 'Charleston',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Clyde the Cougar',
+        imgSrc: 'charleston.jpg'
     },
     [CollegeEnum.EasternWashington]: {
         collegeName: 'Eastern Washington',
         shortCollegeName: 'E. Washington',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Swoop',
+        imgSrc: 'ewashington.jpg'
     },
     [CollegeEnum.SamHouston]: {
         collegeName: 'Sam Houston',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Sammy Bearkat',
+        imgSrc: 'samhouston.jpg'
     },
     [CollegeEnum.UtahSt]: {
         collegeName: 'Utah St.',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Big Blue',
+        imgSrc: 'utahst.jpg'
     },
     [CollegeEnum.SouthFlorida]: {
         collegeName: 'South Florida',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Rocky D. Bull',
+        imgSrc: 'southflorida.jpg'
     },
     [CollegeEnum.Quinnipiac]: {
         collegeName: 'Quinnipiac',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Boomer the Bobcat',
+        imgSrc: 'quinnipiac.jpg'
     },
     [CollegeEnum.Oakland]: {
         collegeName: 'Oakland',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Grizz',
+        imgSrc: 'oakland.jpg'
     },
 }
 
