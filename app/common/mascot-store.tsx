@@ -612,6 +612,53 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         mascotName: 'Grizz',
         imgSrc: 'oakland.jpg'
     },
+    [CollegeEnum.HolyCross]: {
+        collegeName: 'Holy Cross',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.EasternIllinois]: {
+        collegeName: 'Eastern Illinois',
+        shortCollegeName: 'E Illinois',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Marshall]: {
+        collegeName: 'Marshall',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Temple]: {
+        collegeName: 'Temple',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.FloridaGulfCoast]: {
+        collegeName: 'Florida Gulf Coast',
+        shortCollegeName: 'FGCU',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.JacksonSt]: {
+        collegeName: 'Jackson St.',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Stanford]: {
+        collegeName: 'Stanford',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Lamar]: {
+        collegeName: 'Lamar',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Drake]: {
+        collegeName: 'Drake',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
 }
 
 export default MascotStore

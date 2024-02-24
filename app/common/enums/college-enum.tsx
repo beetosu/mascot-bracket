@@ -117,7 +117,16 @@ enum CollegeEnum {
     UtahSt,
     SouthFlorida,
     Quinnipiac,
-    Oakland
+    Oakland,
+    HolyCross,
+    EasternIllinois,
+    Marshall,
+    Temple,
+    FloridaGulfCoast,
+    JacksonSt,
+    Stanford,
+    Lamar,
+    Drake
 }
 
 export default CollegeEnum;
