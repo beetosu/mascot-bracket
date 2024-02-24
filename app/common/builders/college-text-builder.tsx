@@ -157,7 +157,7 @@ function getXStep(currentRound: TournamentRound): number {
         case TournamentRound.FinalFour:
             return 385;
         case TournamentRound.Championship:
-            return 350;
+            return 340;
         default:
             return CANVAS_WIDTH / 2;
     }
