@@ -6,39 +6,39 @@ import Tournament from "../types/tournament";
 
 const mens2024Bracket: BracketInfo[] = [
     {
-        id: CollegeEnum.Merrimack,
+        id: CollegeEnum.Grambling,
         rank: 16
     },
     {
-        id: CollegeEnum.NorfolkSt,
+        id: CollegeEnum.MontanaSt,
         rank: 16
     },
     {
-        id: CollegeEnum.Unknown,
-        rank: 16
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 16
-    },
-    {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Oklahoma,
         rank: 11
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Virginia,
         rank: 11
     },
     {
-        id: CollegeEnum.Unknown,
-        rank: 12
+        id: CollegeEnum.Wagner,
+        rank: 16
     },
     {
-        id: CollegeEnum.Unknown,
-        rank: 12
+        id: CollegeEnum.Howard,
+        rank: 16
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.StJohns,
+        rank: 11
+    },
+    {
+        id: CollegeEnum.NewMexico,
+        rank: 11
+    },
+    {
+        id: CollegeEnum.Purdue,
         rank: 1
     },
     {
@@ -47,15 +47,15 @@ const mens2024Bracket: BracketInfo[] = [
         firstFour: 0
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.BoiseSt,
         rank: 8
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.MississippiSt,
         rank: 9
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.SanDiegoSt,
         rank: 5
     },
     {
@@ -63,11 +63,77 @@ const mens2024Bracket: BracketInfo[] = [
         rank: 12
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Kentucky,
         rank: 4
     },
     {
-        id: CollegeEnum.UCIrvine,
+        id: CollegeEnum.Vermont,
+        rank: 13
+    },
+    {
+        id: CollegeEnum.WashingtonSt,
+        rank: 6
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 11,
+        firstFour: 1
+    },
+    {
+        id: CollegeEnum.Creighton,
+        rank: 3
+    },
+    {
+        id: CollegeEnum.MoreheadSt,
+        rank: 14
+    },
+    {
+        id: CollegeEnum.UtahSt,
+        rank: 7
+    },
+    {
+        id: CollegeEnum.TexasAM,
+        rank: 10
+    },
+    {
+        id: CollegeEnum.IowaSt,
+        rank: 2
+    },
+    {
+        id: CollegeEnum.SDakotaSt,
+        rank: 15
+    },
+    {
+        id: CollegeEnum.NorthCarolina,
+        rank: 1
+    },
+    {
+        id: CollegeEnum.Unknown,
+        rank: 16,
+        firstFour: 2
+    },
+    {
+        id: CollegeEnum.Northwestern,
+        rank: 8
+    },
+    {
+        id: CollegeEnum.Texas,
+        rank: 9
+    },
+    {
+        id: CollegeEnum.BYU,
+        rank: 5
+    },
+    {
+        id: CollegeEnum.GrandCanyon,
+        rank: 12
+    },
+    {
+        id: CollegeEnum.Alabama,
+        rank: 4
+    },
+    {
+        id: CollegeEnum.Samford,
         rank: 13
     },
     {
@@ -75,68 +141,67 @@ const mens2024Bracket: BracketInfo[] = [
         rank: 6
     },
     {
-        id: CollegeEnum.IndianaSt,
+        id: CollegeEnum.Drake,
         rank: 11
     },
     {
-        id: CollegeEnum.Alabama,
+        id: CollegeEnum.Baylor,
         rank: 3
     },
     {
-        id: CollegeEnum.HighPoint,
+        id: CollegeEnum.Oakland,
         rank: 14
     },
     {
-        id: CollegeEnum.WashingtonSt,
+        id: CollegeEnum.Nevada,
         rank: 7
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.MichiganSt,
         rank: 10
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Arizona,
         rank: 2
     },
     {
-        id: CollegeEnum.MoreheadSt,
+        id: CollegeEnum.Longwood,
         rank: 15
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Houston,
         rank: 1
     },
     {
-        id: CollegeEnum.Unknown,
-        rank: 16,
-        firstFour: 1
+        id: CollegeEnum.UCDavis,
+        rank: 16
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.FloridaAtlantic,
         rank: 8
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.ColoradoSt,
         rank: 9
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Wisconsin,
         rank: 5
     },
     {
-        id: CollegeEnum.Richmond,
+        id: CollegeEnum.SouthFlorida,
         rank: 12
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Auburn,
         rank: 4
     },
     {
-        id: CollegeEnum.AppalachianSt,
+        id: CollegeEnum.VCU,
         rank: 13
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Florida,
         rank: 6
     },
     {
@@ -145,27 +210,27 @@ const mens2024Bracket: BracketInfo[] = [
         firstFour: 2
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Illinois,
         rank: 3
     },
     {
-        id: CollegeEnum.Charleston,
+        id: CollegeEnum.Akron,
         rank: 14
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Gonzaga,
         rank: 7
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.TCU,
         rank: 10
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Marquette,
         rank: 2
     },
     {
-        id: CollegeEnum.EasternWashington,
+        id: CollegeEnum.WesternKentucky,
         rank: 15
     },
     {
@@ -173,128 +238,63 @@ const mens2024Bracket: BracketInfo[] = [
         rank: 1
     },
     {
-        id: CollegeEnum.EasternKentucky,
+        id: CollegeEnum.Stetson,
         rank: 16
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Clemson,
         rank: 8
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Dayton,
         rank: 9
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.SouthCarolina,
         rank: 5
     },
     {
-        id: CollegeEnum.Samford,
+        id: CollegeEnum.Princeton,
         rank: 12
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Kansas,
         rank: 4
     },
     {
-        id: CollegeEnum.Yale,
+        id: CollegeEnum.Charleston,
         rank: 13
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.TexasTech,
         rank: 6
     },
     {
-        id: CollegeEnum.GrandCanyon,
+        id: CollegeEnum.JamesMadison,
         rank: 11
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Duke,
         rank: 3
-    },
-    {
-        id: CollegeEnum.Oakland,
-        rank: 14
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 7
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 10
-    },
-    {
-        id: CollegeEnum.NorthCarolina,
-        rank: 2
     },
     {
         id: CollegeEnum.Colgate,
-        rank: 15
-    },
-    {
-        id: CollegeEnum.Houston,
-        rank: 1
-    },
-    {
-        id: CollegeEnum.SamHouston,
-        rank: 16
-    },
-    {
-        id: CollegeEnum.UtahSt,
-        rank: 8
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 9
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 5
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 12,
-        firstFour: 3
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 4
-    },
-    {
-        id: CollegeEnum.Akron,
-        rank: 13
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 6
-    },
-    {
-        id: CollegeEnum.SouthFlorida,
-        rank: 11
-    },
-    {
-        id: CollegeEnum.Unknown,
-        rank: 3
-    },
-    {
-        id: CollegeEnum.Vermont,
         rank: 14
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Nebraska,
         rank: 7
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Colorado,
         rank: 10
     },
     {
-        id: CollegeEnum.Unknown,
+        id: CollegeEnum.Tennessee,
         rank: 2
     },
     {
-        id: CollegeEnum.Quinnipiac,
+        id: CollegeEnum.Fairfield,
         rank: 15
     }
 ];
