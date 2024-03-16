@@ -660,6 +660,111 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
         mascotName: 'Griff II',
         imgSrc: 'drake.gif'
     },
+    [CollegeEnum.Grambling]: {
+        collegeName: 'Grambling',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Oklahoma]: {
+        collegeName: 'Oklahoma',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Virginia]: {
+        collegeName: 'Virginia',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Wagner]: {
+        collegeName: 'Wagner',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Howard]: {
+        collegeName: 'Howard',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.StJohns]: {
+        collegeName: 'St. Johns',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.NewMexico]: {
+        collegeName: 'New Mexico',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.MississippiSt]: {
+        collegeName: 'Mississippi St',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.TexasAM]: {
+        collegeName: 'Texas A&M',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Northwestern]: {
+        collegeName: 'Northwestern',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.BYU]: {
+        collegeName: 'BYU',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Nevada]: {
+        collegeName: 'Nevada',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.UCDavis]: {
+        collegeName: 'UC Davis',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.FloridaAtlantic]: {
+        collegeName: 'Florida Atlantic',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.VCU]: {
+        collegeName: 'VCU',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Florida]: {
+        collegeName: 'Florida',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.WesternKentucky]: {
+        collegeName: 'Western Kentucky',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Stetson]: {
+        collegeName: 'Stetson',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.JamesMadison]: {
+        collegeName: 'James Madison',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Nebraska]: {
+        collegeName: 'Nebraska',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
+    [CollegeEnum.Colorado]: {
+        collegeName: 'Colorado',
+        mascotName: 'Unknown',
+        imgSrc: 'unknown.gif'
+    },
 }
 
 export default MascotStore

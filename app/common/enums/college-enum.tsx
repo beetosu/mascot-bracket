@@ -126,7 +126,28 @@ enum CollegeEnum {
     JacksonSt,
     Stanford,
     Lamar,
-    Drake
+    Drake,
+    Grambling,
+    Oklahoma,
+    Virginia,
+    Wagner,
+    Howard,
+    StJohns,
+    NewMexico,
+    MississippiSt,
+    TexasAM,
+    Northwestern,
+    BYU,
+    Nevada,
+    UCDavis,
+    FloridaAtlantic,
+    VCU,
+    Florida,
+    WesternKentucky,
+    Stetson,
+    JamesMadison,
+    Nebraska,
+    Colorado
 }
 
 export default CollegeEnum;
