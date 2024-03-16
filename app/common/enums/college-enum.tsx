@@ -140,7 +140,6 @@ enum CollegeEnum {
     BYU,
     Nevada,
     UCDavis,
-    FloridaAtlantic,
     VCU,
     Florida,
     WesternKentucky,

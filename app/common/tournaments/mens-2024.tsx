@@ -177,7 +177,7 @@ const mens2024Bracket: BracketInfo[] = [
         rank: 16
     },
     {
-        id: CollegeEnum.FloridaAtlantic,
+        id: CollegeEnum.FAU,
         rank: 8
     },
     {

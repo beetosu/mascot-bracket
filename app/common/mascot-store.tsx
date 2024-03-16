@@ -657,113 +657,109 @@ const MascotStore: { [college in CollegeEnum]: MascotData } = {
     },
     [CollegeEnum.Drake]: {
         collegeName: 'Drake',
-        mascotName: 'Griff II',
-        imgSrc: 'drake.gif'
+        mascotName: 'Spike',
+        imgSrc: 'drake.jpg'
     },
     [CollegeEnum.Grambling]: {
         collegeName: 'Grambling',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Tiger',
+        imgSrc: 'grambling.png'
     },
     [CollegeEnum.Oklahoma]: {
         collegeName: 'Oklahoma',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Boomer and Sooner',
+        imgSrc: 'oklahoma.jpg'
     },
     [CollegeEnum.Virginia]: {
         collegeName: 'Virginia',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Cav Man',
+        imgSrc: 'virginia.jfif'
     },
     [CollegeEnum.Wagner]: {
         collegeName: 'Wagner',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Seahawk',
+        imgSrc: 'wagner.jpg'
     },
     [CollegeEnum.Howard]: {
         collegeName: 'Howard',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Bison',
+        imgSrc: 'howard.png'
     },
     [CollegeEnum.StJohns]: {
         collegeName: 'St. Johns',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Johnny Thunderbird',
+        imgSrc: 'stjohns.jpg'
     },
     [CollegeEnum.NewMexico]: {
         collegeName: 'New Mexico',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Lobo',
+        imgSrc: 'newmexico.png'
     },
     [CollegeEnum.MississippiSt]: {
         collegeName: 'Mississippi St',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Bully and Belle',
+        imgSrc: 'mississippistate.jpg'
     },
     [CollegeEnum.TexasAM]: {
         collegeName: 'Texas A&M',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Reveille',
+        imgSrc: 'texasam.jpg'
     },
     [CollegeEnum.Northwestern]: {
         collegeName: 'Northwestern',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Willie the Wildcat',
+        imgSrc: 'northwestern.jpg'
     },
     [CollegeEnum.BYU]: {
         collegeName: 'BYU',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Cosmo the Cougar',
+        imgSrc: 'byu.png'
     },
     [CollegeEnum.Nevada]: {
         collegeName: 'Nevada',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'The Wolf Pack',
+        imgSrc: 'nevada.jfif'
     },
     [CollegeEnum.UCDavis]: {
         collegeName: 'UC Davis',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
-    },
-    [CollegeEnum.FloridaAtlantic]: {
-        collegeName: 'Florida Atlantic',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Gunrock the Mustang',
+        imgSrc: 'ucdavis.jpg'
     },
     [CollegeEnum.VCU]: {
         collegeName: 'VCU',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Rodney the Ram',
+        imgSrc: 'vcu.jpg'
     },
     [CollegeEnum.Florida]: {
         collegeName: 'Florida',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Albert and Alberta Gator',
+        imgSrc: 'florida.jpg'
     },
     [CollegeEnum.WesternKentucky]: {
         collegeName: 'Western Kentucky',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        shortCollegeName: 'W Kentucky',
+        mascotName: 'Big Red',
+        imgSrc: 'westernkentucky.jpg'
     },
     [CollegeEnum.Stetson]: {
         collegeName: 'Stetson',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Hatter',
+        imgSrc: 'stetson.jpeg'
     },
     [CollegeEnum.JamesMadison]: {
         collegeName: 'James Madison',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Duke Dog',
+        imgSrc: 'jamesmadison.jpg'
     },
     [CollegeEnum.Nebraska]: {
         collegeName: 'Nebraska',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Herbie Husker and Lil\' Red',
+        imgSrc: 'nebraska.jpg'
     },
     [CollegeEnum.Colorado]: {
         collegeName: 'Colorado',
-        mascotName: 'Unknown',
-        imgSrc: 'unknown.gif'
+        mascotName: 'Ralphie the Buffalo',
+        imgSrc: 'colorado.jpg'
     },
 }
 
